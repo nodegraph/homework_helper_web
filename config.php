@@ -144,6 +144,25 @@ $subjectAreas = [
     ]
 ];
 
+$demoVideos = [
+    "title" => "See it in Action",
+    "description" => "Watch how Homework Helper works on Android and Windows.",
+    "videos" => [
+        [
+            "title" => "Android",
+            "url" => "https://www.youtube.com/embed/hQ0WXiHwEsA",
+            "paddingBottom" => "177.78%", // 9:16 aspect ratio
+            "maxWidth" => "320px"
+        ],
+        [
+            "title" => "Windows",
+            "url" => "https://www.youtube.com/embed/zV1zWcRxJd8",
+            "paddingBottom" => "56.25%", // 16:9 aspect ratio
+            "maxWidth" => "600px"
+        ]
+    ]
+];
+
 $bottomCta = [
     "title" => "Why Homework Helper?",
     "description" => "Versatile, Comprehensive, Intuitive, Instant, and Educational. Join thousands of students mastering their studies.",
@@ -225,7 +244,7 @@ $footer = [
 
     ],
     "copyright" => "© 2025 Homework Helper. All rights reserved.",
-    "message" => "Made with ❤️ in Palo Alto, California.",
+    "message" => "Palo Alto, California.",
 ];
 
 

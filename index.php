@@ -156,6 +156,33 @@ require_once 'config.php';
             </div>
         </div>
     </section>
+
+    <!-- Demo Videos Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-heading text-gray-900 mb-4"><?php echo $demoVideos['title']; ?></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto font-body"><?php echo $demoVideos['description']; ?></p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
+                <?php foreach ($demoVideos['videos'] as $video): ?>
+                    <div class="w-full flex flex-col items-center" style="max-width: <?php echo $video['maxWidth']; ?>">
+                        <div class="relative w-full rounded-2xl shadow-lg overflow-hidden border border-gray-200 bg-black" style="padding-bottom: <?php echo $video['paddingBottom']; ?>;">
+                            <iframe 
+                                src="<?php echo $video['url']; ?>" 
+                                title="<?php echo $video['title']; ?>"
+                                class="absolute top-0 left-0 w-full h-full"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-900 font-heading"><?php echo $video['title']; ?></h3>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
     
     <!-- Feature Cards with Icons -->
     <?php include '_components/feature_card_with_icon.php'; ?>
@@ -177,6 +204,8 @@ require_once 'config.php';
             </div>
         </div>
     </section>
+
+
 
     <!-- Reviews Section -->
     <?php include '_components/review_card.php'; ?>
