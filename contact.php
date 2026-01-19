@@ -46,6 +46,7 @@ require_once 'config.php';
                             </div>
                         </div>
                         
+                        <?php if (false): ?>
                         <div class="flex items-start space-x-4">
                             <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <span class="material-icons text-green-600">chat</span>
@@ -73,6 +74,7 @@ require_once 'config.php';
                                 <a href="/faq" class="text-blue-600 hover:text-blue-700 font-medium">Visit FAQ</a>
                             </div>
                         </div>
+                        <?php endif; ?>
                     </div>
                     
                     <!-- App Download -->

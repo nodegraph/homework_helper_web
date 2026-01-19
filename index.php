@@ -160,9 +160,24 @@ require_once 'config.php';
     <!-- Feature Cards with Icons -->
     <?php include '_components/feature_card_with_icon.php'; ?>
     
-    <!-- Feature Cards with Screenshots -->
-    <?php include '_components/feature_card_with_screenshot.php'; ?>
-    
+    <!-- Subject Areas Section -->
+    <section class="py-16 bg-blue-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-heading text-gray-900 mb-4"><?php echo $subjectAreas['title']; ?></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto font-body"><?php echo $subjectAreas['description']; ?></p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <?php foreach ($subjectAreas['subjects'] as $subject): ?>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 font-heading"><?php echo $subject['title']; ?></h3>
+                        <p class="text-sm text-gray-600 font-body"><?php echo $subject['description']; ?></p>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
     <!-- Reviews Section -->
     <?php include '_components/review_card.php'; ?>
     

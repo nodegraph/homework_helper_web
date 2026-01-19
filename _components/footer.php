@@ -79,6 +79,7 @@ require_once __DIR__ . '/../config.php';
             </div>
             
             <!-- Social Links -->
+            <?php if (false): ?>
             <div>
                 <h3 class="text-lg font-semibold font-heading text-gray-900 mb-4">Follow Us</h3>
                 <ul class="space-y-2">
@@ -95,6 +96,7 @@ require_once __DIR__ . '/../config.php';
                     <?php endforeach; ?>
                 </ul>
             </div>
+            <?php endif; ?>
         </div>
         
         <!-- Legal Links -->

@@ -48,6 +48,7 @@ require_once __DIR__ . '/../config.php';
         </div>
         
         <!-- App Store Ratings -->
+        <?php if (false): ?>
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <?php if ($common['appRatingAppStore']): ?>
                 <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
@@ -85,5 +86,6 @@ require_once __DIR__ . '/../config.php';
                 </div>
             <?php endif; ?>
         </div>
+        <?php endif; ?>
     </div>
 </section>
