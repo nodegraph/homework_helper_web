@@ -146,16 +146,16 @@ $subjectAreas = [
 
 $demoVideos = [
     "title" => "See it in Action",
-    "description" => "Watch how Homework Helper works on Android and Windows.",
+    "description" => "Watch how Homework Helper works on Mobile and Desktop platforms.",
     "videos" => [
         [
-            "title" => "Android",
+            "title" => "Mobile",
             "url" => "https://www.youtube.com/embed/hQ0WXiHwEsA",
             "paddingBottom" => "177.78%", // 9:16 aspect ratio
             "maxWidth" => "320px"
         ],
         [
-            "title" => "Windows",
+            "title" => "Desktop",
             "url" => "https://www.youtube.com/embed/zV1zWcRxJd8",
             "paddingBottom" => "56.25%", // 16:9 aspect ratio
             "maxWidth" => "600px"
