@@ -115,7 +115,8 @@ require_once 'config.php';
                             <?php if (isset($common['tryNowUrl']) && $common['tryNowUrl']): ?>
                                 <a href="<?php echo $common['tryNowUrl']; ?>" 
                                    target="_blank" 
-                                   class="flex items-center justify-center w-32 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-lg hover:opacity-80 transition-opacity duration-200">
+                                   style="background-color: black;"
+                                   class="flex items-center justify-center w-32 h-10 bg-black hover:bg-gray-800 text-white rounded-lg hover:opacity-80 transition-opacity duration-200">
                                     <span class="font-bold">Try Now</span>
                                 </a>
                             <?php endif; ?>
