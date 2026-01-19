@@ -5,7 +5,7 @@
 
 // index
 $home = [
-    "title" => "Finish <span class='text-blue-600'>homework</span> fast and boost your <span class='text-blue-600'>grades</span> sky high",
+    "title" => "Finish <span class='text-blue-600'>homework</span> faster. Learn more effectively. Get better <span class='text-blue-600'>grades</span>.",
     "description" => "Homework Helper is your friendly AI tutor. Take a photo, take a screenshot, use your voice, type or handwrite to get real-time solutions and help writing essays.",
     // "screenshot" => "/assets/main_screen.png",
     "screenshots" => [
