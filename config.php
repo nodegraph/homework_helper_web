@@ -224,8 +224,8 @@ $footer = [
 
 
     ],
-    "copyright" => "© 2025 SubFox. All rights reserved.",
-    "message" => "Made with ❤️ in Pakistan",
+    "copyright" => "© 2025 Homework Helper. All rights reserved.",
+    "message" => "Made with ❤️ in Palo Alto, California.",
 ];
 
 
