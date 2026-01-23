@@ -1,5 +1,8 @@
 <?php
 
+// Fix for Vercel deployment error: /opt/wrapper: does not exist
+putenv("AWS_LAMBDA_EXEC_WRAPPER=");
+
 // header
 
 
