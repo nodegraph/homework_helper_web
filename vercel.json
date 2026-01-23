@@ -1,7 +1,12 @@
 {
-    "functions": {
-        "*.php": {
-            "runtime": "vercel-php@0.7.2"
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build"
+        },
+        {
+            "src": "*.php",
+            "use": "vercel-php@0.7.2"
         }
-    }
+    ]
 }
