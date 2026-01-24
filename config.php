@@ -186,11 +186,11 @@ $footer = [
             "link" => "/contact.php",
             "isExternal" => false,
         ],
-        [
-            "title" => "Authors",
-            "link" => "/authors.php",
-            "isExternal" => false,
-        ],
+        // [
+        //     "title" => "Authors",
+        //     "link" => "/authors.php",
+        //     "isExternal" => false,
+        // ],
         // [
         //     "title" => "Feature Request",
         //     "link" => "https://subfox.canny.io/feature-requests",
