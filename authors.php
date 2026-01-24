@@ -4,7 +4,7 @@ require_once 'config.php';
 
 // Authors Data 
 $authorsPage = [
-    "title" => "Made by YouMacro",
+    "title" => "Made by Creators of YouMacro",
     "description" => "An AI tutor to help you finish homework, while you download videos.",
 ];
 ?>
