@@ -26,7 +26,7 @@ $common = [
     'microsoftStoreUrl' => "https://apps.microsoft.com/detail/9PF610SJ0FWF",
     'chromeWebStoreUrl' => "https://chromewebstore.google.com/detail/homework-helper/omedkmkklimebcbencalahkfjfkoempn",
     'tryNowUrl' => "https://domyhome.work/MainHWHelperPage",
-    'appName' => "Homework Helper by the YouMacro Team",
+    'appName' => "Homework Helper",
     'appVersion' => "1.0.0",
     'appTitle' => "Improve your grades and finish homework faster",
     'appDescription' => "Homework Helper is your friendly AI tutor. Take a photo, take a screenshot, use your voice, type or handwrite to get real-time solutions and help writing essays.",
@@ -184,6 +184,11 @@ $footer = [
         [
             "title" => "Contact",
             "link" => "/contact.php",
+            "isExternal" => false,
+        ],
+        [
+            "title" => "Authors",
+            "link" => "/authors.php",
             "isExternal" => false,
         ],
         // [
