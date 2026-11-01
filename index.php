@@ -19,7 +19,7 @@ $platforms = [
             <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR STUDY SIDEKICK</p>
             <h1 id="hero-heading">Less stuck.<br>More <em>aha.</em></h1>
             <p class="hero-description">That tricky question? Let’s work it out.<br class="desktop-break"> Talk, snap, or sketch your way to understanding with an AI study companion.</p>
-            <div class="hero-actions"><a class="button button-primary" href="#download">Find your app <?= siteIcon('arrow') ?></a><a class="button button-text" href="#in-action"><?= siteIcon('play') ?> Watch a demo</a></div>
+            <div class="hero-actions"><a class="button button-primary" href="<?= htmlspecialchars($common['tryNowUrl'], ENT_QUOTES, 'UTF-8') ?>">Try it now <?= siteIcon('arrow') ?></a><a class="button button-secondary" href="#download">Find your app</a><a class="button button-text" href="#in-action"><?= siteIcon('play') ?> Watch a demo</a></div>
             <p class="hero-platforms">Android <span>·</span> iPhone <span>·</span> iPad <span>·</span> Windows</p>
         </div>
         <div class="hero-visual">

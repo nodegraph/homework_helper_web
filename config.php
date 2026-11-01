@@ -25,7 +25,7 @@ $common = [
     'googlePlayUrl' => "https://play.google.com/store/apps/details?id=ing.omat.hw_helper", // could be null
     'microsoftStoreUrl' => "https://apps.microsoft.com/detail/9PF610SJ0FWF",
     'chromeWebStoreUrl' => "https://chromewebstore.google.com/detail/homework-helper/omedkmkklimebcbencalahkfjfkoempn",
-    'tryNowUrl' => "https://domyhome.work/MainHWHelperPage",
+    'tryNowUrl' => "https://www.faviclone.com/mobile",
     'appName' => "Homework Helper",
     'appVersion' => "1.0.0",
     'appTitle' => "Less stuck. More aha.",
