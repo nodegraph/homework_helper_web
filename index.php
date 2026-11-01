@@ -73,6 +73,7 @@ $platforms = [
             <a class="download-card" href="<?= htmlspecialchars($common['googlePlayUrl'], ENT_QUOTES, 'UTF-8') ?>"><?= siteIcon('phone') ?><span><strong>Android</strong><small>Get it on Google Play</small></span><?= siteIcon('arrow') ?></a>
             <a class="download-card" href="<?= htmlspecialchars($common['appStoreUrl'], ENT_QUOTES, 'UTF-8') ?>"><?= siteIcon('tablet') ?><span><strong>iPhone &amp; iPad</strong><small>Download on the App Store</small></span><?= siteIcon('arrow') ?></a>
             <a class="download-card" href="<?= htmlspecialchars($common['microsoftStoreUrl'], ENT_QUOTES, 'UTF-8') ?>"><?= siteIcon('desktop') ?><span><strong>Windows</strong><small>Get it from Microsoft</small></span><?= siteIcon('arrow') ?></a>
+            <a class="download-card" href="<?= htmlspecialchars($common['tryNowUrl'], ENT_QUOTES, 'UTF-8') ?>"><?= siteIcon('web') ?><span><strong>Web</strong><small>Try it in your browser</small></span><?= siteIcon('arrow') ?></a>
         </div>
         <p class="download-note">For teens 13+ and adults. Internet required. AI can make mistakes; check important answers.</p>
         <p class="chrome-link">On your browser? <a href="<?= htmlspecialchars($common['chromeWebStoreUrl'], ENT_QUOTES, 'UTF-8') ?>">Get the Chrome extension</a></p>

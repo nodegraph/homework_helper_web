@@ -9,6 +9,7 @@ function siteIcon(string $name, string $class = ''): string {
         'phone' => '<rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/>',
         'tablet' => '<rect x="3" y="2" width="18" height="20" rx="3"/><path d="M10 18h4"/>',
         'desktop' => '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/>',
+        'web' => '<rect x="2" y="3" width="20" height="18" rx="3"/><path d="M2 8h20M6 5.5h.01M9 5.5h.01"/>',
         'check' => '<path d="m5 12 4 4L19 6"/>',
         'plus' => '<path d="M5 12h14M12 5v14"/>',
     ];
