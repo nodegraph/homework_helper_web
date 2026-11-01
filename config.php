@@ -28,8 +28,8 @@ $common = [
     'tryNowUrl' => "https://domyhome.work/MainHWHelperPage",
     'appName' => "Homework Helper",
     'appVersion' => "1.0.0",
-    'appTitle' => "Improve your grades and finish homework faster",
-    'appDescription' => "Homework Helper is your friendly AI tutor. Take a photo, take a screenshot, use your voice, type or handwrite to get real-time solutions and help writing essays.",
+    'appTitle' => "Less stuck. More aha.",
+    'appDescription' => "Talk through homework, share a photo, or sketch an idea with an AI study companion for teens 13+ and adults.",
     'appRatingAppStore' => [
         'totalReviews' => 10,
         'rating' => 4.5,
@@ -38,8 +38,8 @@ $common = [
         'totalReviews' => 10,
         'rating' => 4.5,
     ], // could be null
-    'appIcon' => "/assets/icon-foreground.png",
-    'supportEmail' => "aut@omat.ing",
+    'appIcon' => "/assets/showcase/app-icon.png",
+    'supportEmail' => "support@nodegraph.com",
     'screenshotRoundedCorners' => true, // Set to false for sharp corners
 ];
 

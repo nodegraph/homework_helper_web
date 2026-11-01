@@ -1,219 +1,83 @@
 <?php
-// Include config for global variables
-require_once 'config.php';
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/_components/site-icons.php';
+$platforms = [
+    'android' => ['name' => 'Android', 'icon' => 'phone', 'duration' => '1:29', 'title' => 'A question. A conversation. A clearer idea.', 'description' => 'Watch a real Pixel session: check an algebra answer, upload a science worksheet, and hear the tutor talk it through.', 'width' => 1080, 'height' => 2410],
+    'iphone' => ['name' => 'iPhone', 'icon' => 'phone', 'duration' => '0:53', 'title' => 'Big questions. Pocket-sized help.', 'description' => 'See a real iPhone session with a speaking avatar, an algebra check and an image-based science question.', 'width' => 886, 'height' => 1920],
+    'ipad' => ['name' => 'iPad', 'icon' => 'tablet', 'duration' => '0:30', 'title' => 'A little more room to work it out.', 'description' => 'See the tutor, share a worksheet, and make space for the explanation in the iPad app.', 'width' => 1200, 'height' => 1600],
+    'windows' => ['name' => 'Windows', 'icon' => 'desktop', 'duration' => '1:10', 'title' => 'Make your desk a place for discovery.', 'description' => 'Follow a real Windows session from an algebra question to an uploaded science worksheet, with the tutor’s spoken replies.', 'width' => 1920, 'height' => 1080],
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <?php include '_components/meta.php'; ?>
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translate3d(0, 40px, 0);
-            }
-            to {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-        
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translate3d(40px, 0, 0);
-            }
-            to {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        
-        .animate-fade-in-right {
-            animation: fadeInRight 0.8s ease-out forwards;
-        }
-        
-        .animation-delay-300 { animation-delay: 0.3s; }
-        .animation-delay-500 { animation-delay: 0.5s; }
-        .animation-delay-600 { animation-delay: 0.6s; }
-        .animation-delay-700 { animation-delay: 0.7s; }
-        .animation-delay-900 { animation-delay: 0.9s; }
-        
-        /* Enhanced hover shadow */
-        .hover\:shadow-3xl:hover {
-            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
-        }
-    </style>
-</head>
-<body class="bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen font-body">
-    <!-- Header -->
-    <?php include '_components/header.php'; ?>
-    
-    <!-- Hero Section -->
-    <section class="pt-16 pb-20 relative overflow-hidden">
-        <!-- Background Gradient -->
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-100/50 via-white/30 to-blue-100/50"></div>
-        
-        <!-- Animated Blurred Blobs -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-20 -left-32 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-20 -right-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-300/20 rounded-full blur-2xl animate-pulse delay-500"></div>
+<head><?php include __DIR__ . '/_components/meta.php'; ?></head>
+<body class="site-page">
+<?php include __DIR__ . '/_components/header.php'; ?>
+<main id="main">
+    <section class="hero section-wrap" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR STUDY SIDEKICK</p>
+            <h1 id="hero-heading">Less stuck.<br>More <em>aha.</em></h1>
+            <p class="hero-description">That tricky question? Let’s work it out.<br class="desktop-break"> Talk, snap, or sketch your way to understanding with an AI study companion.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#download">Find your app <?= siteIcon('arrow') ?></a><a class="button button-text" href="#in-action"><?= siteIcon('play') ?> Watch a demo</a></div>
+            <p class="hero-platforms">Android <span>·</span> iPhone <span>·</span> iPad <span>·</span> Windows</p>
         </div>
-        
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Hero Content -->
-                <div class="text-center lg:text-left">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-gray-900 mb-6 leading-tight animate-fade-in-up opacity-0 animation-delay-300">
-                        <?php echo $home['title']; ?>
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed font-body animate-fade-in-up opacity-0 animation-delay-500">
-                        <?php echo $home['description']; ?>
-                    </p>
-                    
-                    <!-- CTA Buttons -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center lg:justify-items-start mb-8 animate-fade-in-up opacity-0 animation-delay-700 w-fit mx-auto lg:mx-0">
-                        <?php if ($common['appStoreUrl']): ?>
-                            <a href="<?php echo $common['appStoreUrl']; ?>" 
-                               target="_blank" 
-                               class="block w-48 h-14 hover:scale-110 hover:-translate-y-1 transition-all duration-300 transform shadow-lg hover:shadow-2xl group">
-                                <img src="./assets/app-store-download.svg" alt="Download on the App Store" class="w-full h-full group-hover:brightness-110 transition-all duration-300">
-                            </a>
-                        <?php endif; ?>
-                        
-                        <?php if ($common['googlePlayUrl']): ?>
-                            <a href="<?php echo $common['googlePlayUrl']; ?>" 
-                               target="_blank" 
-                               class="block w-48 h-14 hover:scale-110 hover:-translate-y-1 transition-all duration-300 transform shadow-lg hover:shadow-2xl group">
-                                <img src="./assets/google-play-download.svg" alt="Get it on Google Play" class="w-full h-full group-hover:brightness-110 transition-all duration-300">
-                            </a>
-                        <?php endif; ?>
-                        
-                        <?php if (isset($common['microsoftStoreUrl']) && $common['microsoftStoreUrl']): ?>
-                            <a href="<?php echo $common['microsoftStoreUrl']; ?>" 
-                               target="_blank" 
-                               class="block w-48 h-14 hover:scale-110 hover:-translate-y-1 transition-all duration-300 transform shadow-lg hover:shadow-2xl group">
-                                <img src="./assets/ms_dark.svg" alt="Get it from Microsoft" class="w-full h-full group-hover:brightness-110 transition-all duration-300">
-                            </a>
-                        <?php endif; ?>
-                        
-                        <?php if (isset($common['chromeWebStoreUrl']) && $common['chromeWebStoreUrl']): ?>
-                            <a href="<?php echo $common['chromeWebStoreUrl']; ?>" 
-                               target="_blank" 
-                               class="block w-48 h-14 rounded-lg overflow-hidden hover:scale-110 hover:-translate-y-1 transition-all duration-300 transform shadow-lg hover:shadow-2xl group">
-                                <img src="./assets/get-on-chrome.png" alt="Available in the Chrome Web Store" class="w-full h-full group-hover:brightness-110 transition-all duration-300">
-                            </a>
-                        <?php endif; ?>
-                        
-                        <?php if (isset($common['tryNowUrl']) && $common['tryNowUrl']): ?>
-                            <a href="<?php echo $common['tryNowUrl']; ?>" 
-                               target="_blank" 
-                               style="background-color: black;"
-                               class="flex items-center justify-center w-48 h-14 bg-black hover:bg-gray-800 text-white rounded-lg hover:scale-110 hover:-translate-y-1 transition-all duration-300 transform shadow-lg hover:shadow-2xl group">
-                                <span class="text-lg font-bold">Try Now</span>
-                            </a>
-                        <?php endif; ?>
+        <div class="hero-visual">
+            <div class="hero-orbit" aria-hidden="true"></div>
+            <div class="hero-tablet device-frame"><img src="/assets/showcase/ipad-chat.webp" width="1000" height="1333" alt="Homework Helper on iPad, discussing an uploaded science worksheet" fetchpriority="high"></div>
+            <div class="hero-phone device-frame"><img src="/assets/showcase/iphone-chat.webp" width="720" height="1565" alt="Homework Helper’s speaking avatar and an algebra explanation on iPhone" fetchpriority="high"></div>
+            <span class="hero-sticker">Let’s work<br>it out. <span aria-hidden="true">↗</span></span>
+            <span class="hero-visual-caption">Real app recordings. AI-powered conversations.</span>
+        </div>
+    </section>
+    <div class="section-wrap quick-strip" aria-label="Ways to ask"><?php foreach (['chat' => 'Talk it through', 'photo' => 'Snap a question', 'draw' => 'Sketch an idea'] as $icon => $label): ?><span><?= siteIcon($icon) ?><?= $label ?></span><?php endforeach; ?></div>
+
+    <section id="how-it-works" class="section-wrap how-section" aria-labelledby="how-heading">
+        <div class="section-heading"><div><p class="eyebrow">HOW YOU GET THERE IS UP TO YOU</p><h2 id="how-heading">Bring your question.<br>Find your way forward.</h2></div><p>No perfect prompt needed. Start with what you have, and keep asking until the next step makes sense.</p></div>
+        <div class="feature-grid">
+            <article class="feature feature-talk"><div class="feature-copy"><span class="step-label">01 / TALK</span><h3>Make it a conversation.</h3><p>Ask out loud or type it in. Hear an explanation, then follow your curiosity.</p></div><div class="feature-screen phone-screen"><img src="/assets/showcase/android-chat.webp" alt="An Android conversation with Homework Helper" width="720" height="1607" loading="lazy"></div></article>
+            <article class="feature feature-share"><div class="feature-copy"><span class="step-label">02 / SHARE</span><h3>Show what’s got you stuck.</h3><p>Share a homework photo or screenshot. Give your question a little context.</p></div><div class="feature-screen phone-screen"><img src="/assets/showcase/iphone-worksheet.webp" alt="A science worksheet attached to an iPhone conversation" width="720" height="1565" loading="lazy"></div></article>
+            <article class="feature feature-draw"><div class="feature-copy"><span class="step-label">03 / SKETCH</span><h3>Put your thinking on the page.</h3><p>Draw a diagram or mark up an image. Sometimes a few lines say it best.</p></div><div class="drawing-screen"><img src="/assets/showcase/windows-drawing.webp" alt="An original right-triangle sketch in Homework Helper’s drawing editor on Windows" width="1200" height="675" loading="lazy"></div><span class="drawing-note">Your ideas, in your own lines.</span></article>
+        </div>
+        <div class="teacher-note"><span class="teacher-note-icon"><?= siteIcon('plus') ?></span><p><strong>A little more guidance?</strong> Choose a teacher for math, languages or science and explore a course at your own pace.</p><img src="/assets/showcase/iphone-home.webp" width="600" height="1304" alt="The app’s four agents: Homework Helper, Math Teacher, Language Teacher and Science Teacher" loading="lazy"></div>
+    </section>
+
+    <section id="in-action" class="demo-section" aria-labelledby="demo-heading">
+        <div class="section-wrap">
+            <div class="section-heading demo-heading"><div><p class="eyebrow">TAKE A LOOK AROUND</p><h2 id="demo-heading">Real app. Real <em>aha.</em></h2></div><p>Math, science, and a question from a photo.<br>See how a study session comes together.</p></div>
+            <div class="platform-tabs" role="tablist" aria-label="Choose a demo platform">
+            <?php foreach ($platforms as $key => $platform): ?><button id="tab-<?= $key ?>" class="platform-tab" role="tab" aria-selected="<?= $key === 'android' ? 'true' : 'false' ?>" aria-controls="demo-<?= $key ?>" tabindex="<?= $key === 'android' ? '0' : '-1' ?>" data-platform="<?= $key ?>"><?= siteIcon($platform['icon']) ?> <?= $platform['name'] ?></button><?php endforeach; ?>
+            </div>
+            <?php foreach ($platforms as $key => $platform): ?>
+            <div id="demo-<?= $key ?>" class="demo-panel demo-<?= $key ?>" role="tabpanel" aria-labelledby="tab-<?= $key ?>" tabindex="0" <?= $key !== 'android' ? 'hidden' : '' ?>>
+                <div class="demo-stage">
+                    <div class="demo-player" style="--video-ratio:<?= $platform['width'] ?> / <?= $platform['height'] ?>">
+                        <video controls playsinline preload="none" poster="/assets/showcase/<?= $key ?>-poster.webp" width="<?= $platform['width'] ?>" height="<?= $platform['height'] ?>" aria-label="Homework Helper on <?= $platform['name'] ?> walkthrough" data-src="/assets/showcase/<?= $key ?>-demo.mp4">
+                            <track kind="captions" src="/assets/showcase/<?= $key ?>-demo.vtt" srclang="en" label="English" default>
+                        </video>
+                        <button class="video-start" data-video="<?= $key ?>" aria-label="Play the <?= $platform['name'] ?> demo"><span class="play-disc"><?= siteIcon('play') ?></span><span>Play demo <span class="play-duration">/ <?= $platform['duration'] ?></span></span></button>
                     </div>
-                    
-                 
                 </div>
-                
-                <!-- Hero Image -->
-                <div class="relative animate-fade-in-right opacity-0 animation-delay-600">
-                    <?php 
-                    $heroImageCornerClass = $common['screenshotRoundedCorners'] ? 'rounded-3xl' : 'rounded-none';
-                    ?>
-                    
-                    <?php if (isset($home['screenshots']) && is_array($home['screenshots'])): ?>
-                        <!-- Multiple Screenshots Display -->
-                        <div class="relative mx-auto max-w-2xl flex justify-center items-center gap-4 sm:gap-8">
-                            <?php foreach($home['screenshots'] as $index => $screenshot): ?>
-                                <div class="relative w-48 sm:w-64 hover:scale-105 transition-all duration-500 <?php echo $index % 2 == 0 ? 'hover:-rotate-1 z-10' : 'hover:rotate-1 mt-12 z-0'; ?>">
-                                    <img src="<?php echo $screenshot; ?>" 
-                                         alt="<?php echo $common['appName']; ?> Screenshot <?php echo $index + 1; ?>" 
-                                         class="w-full shadow-2xl <?php echo $heroImageCornerClass; ?>">
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php else: ?>
-                        <!-- Single Screenshot Display -->
-                        <div class="relative mx-auto max-w-sm hover:scale-105 transition-all duration-500 hover:rotate-1">
-                            <img src="<?php echo $home['screenshot']; ?>" 
-                                 alt="<?php echo $common['appName']; ?> Screenshot" 
-                                 class="w-full <?php echo $heroImageCornerClass; ?> transition-all duration-500">
-                        </div>
-                    <?php endif; ?>
-                    
-                    <!-- Floating Elements -->
-                    <div class="absolute top-1/3 -left-8 w-12 h-12 bg-green-400 rounded-full opacity-15 animate-ping delay-500"></div>
-                    <div class="absolute bottom-1/3 -right-8 w-8 h-8 bg-yellow-400 rounded-full opacity-25 animate-bounce delay-700"></div>
-                </div>
+                <div class="demo-copy"><span class="demo-badge"><?= $platform['name'] ?> <span>· <?= $platform['duration'] ?></span></span><h3><?= $platform['title'] ?></h3><p><?= $platform['description'] ?></p><ul class="demo-points"><li><?= siteIcon('check') ?> Actual app recordings</li><li><?= siteIcon('check') ?> Hear the tutor’s replies</li><li><?= siteIcon('check') ?> English captions included</li></ul><a class="text-link" href="/assets/showcase/<?= $key ?>-demo.mp4">Open video <?= siteIcon('arrow') ?></a><p class="video-error" role="status" hidden>Having trouble playing? Use the Open video link.</p></div>
             </div>
+            <?php endforeach; ?>
+            <p class="demo-footnote">Recordings show the upcoming app update. Store availability may vary while reviews finish.</p>
+            <noscript><p class="no-js-demos">Watch: <a href="/assets/showcase/android-demo.mp4">Android</a> · <a href="/assets/showcase/iphone-demo.mp4">iPhone</a> · <a href="/assets/showcase/ipad-demo.mp4">iPad</a> · <a href="/assets/showcase/windows-demo.mp4">Windows</a></p></noscript>
         </div>
     </section>
 
-    <!-- Demo Videos Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold font-heading text-gray-900 mb-4"><?php echo $demoVideos['title']; ?></h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto font-body"><?php echo $demoVideos['description']; ?></p>
-            </div>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
-                <?php foreach ($demoVideos['videos'] as $video): ?>
-                    <div class="w-full flex flex-col items-center" style="max-width: <?php echo $video['maxWidth']; ?>">
-                        <div class="relative w-full rounded-2xl shadow-lg overflow-hidden border border-gray-200 bg-black" style="padding-bottom: <?php echo $video['paddingBottom']; ?>;">
-                            <iframe 
-                                src="<?php echo $video['url']; ?>" 
-                                title="<?php echo $video['title']; ?>"
-                                class="absolute top-0 left-0 w-full h-full"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <h3 class="mt-6 text-xl font-bold text-gray-900 font-heading"><?php echo $video['title']; ?></h3>
-                    </div>
-                <?php endforeach; ?>
-            </div>
+    <section id="download" class="section-wrap download-section" aria-labelledby="download-heading">
+        <div class="download-intro"><p class="eyebrow">A FRESH WAY TO FIGURE IT OUT</p><h2 id="download-heading">Curiosity looks<br>good on you.</h2><p>Make room for your next “I get it.”<br>Find Homework Helper on your favorite device.</p></div>
+        <img class="download-art" src="/assets/showcase/study-art.webp" width="1200" height="675" alt="A notebook, pencil and science-inspired illustration" loading="lazy">
+        <div class="download-grid">
+            <a class="download-card" href="<?= htmlspecialchars($common['googlePlayUrl'], ENT_QUOTES, 'UTF-8') ?>"><?= siteIcon('phone') ?><span><strong>Android</strong><small>Get it on Google Play</small></span><?= siteIcon('arrow') ?></a>
+            <a class="download-card" href="<?= htmlspecialchars($common['appStoreUrl'], ENT_QUOTES, 'UTF-8') ?>"><?= siteIcon('tablet') ?><span><strong>iPhone &amp; iPad</strong><small>Download on the App Store</small></span><?= siteIcon('arrow') ?></a>
+            <a class="download-card" href="<?= htmlspecialchars($common['microsoftStoreUrl'], ENT_QUOTES, 'UTF-8') ?>"><?= siteIcon('desktop') ?><span><strong>Windows</strong><small>Get it from Microsoft</small></span><?= siteIcon('arrow') ?></a>
         </div>
+        <p class="download-note">For teens 13+ and adults. Internet required. AI can make mistakes; check important answers.</p>
+        <p class="chrome-link">On your browser? <a href="<?= htmlspecialchars($common['chromeWebStoreUrl'], ENT_QUOTES, 'UTF-8') ?>">Get the Chrome extension</a></p>
     </section>
-    
-    <!-- Feature Cards with Icons -->
-    <?php include '_components/feature_card_with_icon.php'; ?>
-    
-    <!-- Subject Areas Section -->
-    <section class="py-16 bg-blue-50/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold font-heading text-gray-900 mb-4"><?php echo $subjectAreas['title']; ?></h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto font-body"><?php echo $subjectAreas['description']; ?></p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <?php foreach ($subjectAreas['subjects'] as $subject): ?>
-                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200">
-                        <h3 class="text-lg font-bold text-gray-900 mb-2 font-heading"><?php echo $subject['title']; ?></h3>
-                        <p class="text-sm text-gray-600 font-body"><?php echo $subject['description']; ?></p>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Reviews Section -->
-    <?php include '_components/review_card.php'; ?>
-    
-    <!-- Bottom CTA -->
-    <?php include '_components/bottom_download_cta.php'; ?>
-    
-    <!-- Footer -->
-    <?php include '_components/footer.php'; ?>
+</main>
+<?php include __DIR__ . '/_components/footer.php'; ?>
 </body>
 </html>

@@ -22,7 +22,7 @@ $authorsPage = [
     <?php include '_components/header.php'; ?>
     
     <!-- Main Section -->
-    <section class="pt-24 pb-16">
+    <section id="main" class="pt-24 pb-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Page Header -->
             <div class="text-center mb-16">

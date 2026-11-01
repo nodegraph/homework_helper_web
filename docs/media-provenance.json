@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-01T17:10:23.986Z",
+  "scope": "Web derivatives of real approved promotional captures; no synthetic UI or altered answers.",
+  "publication": "The Android, iOS and Windows updates shown were submitted for store review. The screenshots and demos do not imply those updates are already available publicly.",
+  "screenshotVersions": {
+    "android": "44 (reviewed media reused for version45 listing)",
+    "ios": "4.0 (47), depicting the interface retained in build48",
+    "windows": "1.0.45.0 Debug host, depicting the interface retained in 1.0.46.0"
+  },
+  "videos": "Latest actual-device/simulator recordings with the distinct Kokoro am_michael action narrator and original avatar replies. Windows revision3; Android latest Pixel take; iOS v2 edits.",
+  "imageTransformation": "Mechanical proportional resize only, full frame retained. WebP quality86 effort5; app icon PNG retains transparency. No visual content changes.",
+  "videoTransformation": "Full source edit and full frame retained; no speed, timeline, crop, narration or response edits. H.264 CRF23 medium/yuv420p, AAC128kbps stereo48kHz, MP4 faststart. Only proportional scaling and encoding change.",
+  "attribution": "Homework Helper UI, portraits and original demonstration worksheet; operator confirmed promotional permissions. study-art is generated promotional illustration, not an app screenshot. Original red-pencil app icon is operator-owned.",
+  "images": [
+    {
+      "file": "iphone-chat.webp",
+      "source": "Homework Helper video handoff/iOS walkthrough/Source/screenshots/final/iphone/02-math-full-avatar.png",
+      "sourceSha256": "2162e2cc7b0123fcd6f6456b4399d53088faf0f65537177d5628839b7c30f326",
+      "sourceWidth": 1206,
+      "sourceHeight": 2622,
+      "width": 720,
+      "height": 1565,
+      "bytes": 64314,
+      "sha256": "e6fd44f63368bc731cddcfe1830fe6ed40d06db3af5d7b13ada3baf6930aa794"
+    },
+    {
+      "file": "ipad-chat.webp",
+      "source": "Homework Helper video handoff/iOS walkthrough/Source/screenshots/final/ipad/05-science-conversation.png",
+      "sourceSha256": "45f0c4ae85b84800110219973628eedc99a21781ac6ad1cf09318603faa60d7b",
+      "sourceWidth": 2064,
+      "sourceHeight": 2752,
+      "width": 1000,
+      "height": 1333,
+      "bytes": 52030,
+      "sha256": "be6751092c24f51a1c6a442294c503ecf1de501fdf180e5354147ef5cb20d3d8"
+    },
+    {
+      "file": "android-chat.webp",
+      "source": "live_agent/capacitor-app/.artifacts/store-media-44/captures/02-homework.png",
+      "sourceSha256": "257617f707b7d06b76388d30bd1e11841a6c37621dc5dab2bbb449597e170f57",
+      "sourceWidth": 1080,
+      "sourceHeight": 2410,
+      "width": 720,
+      "height": 1607,
+      "bytes": 81260,
+      "sha256": "159080b669e890390b6912b1bedb9074f955d450ea13e3227476e95c33d7fea3"
+    },
+    {
+      "file": "windows-chat.webp",
+      "source": "live_agent/windows-app/store-listing/media/02-homework-helper-chat.png",
+      "sourceSha256": "a9e8a66a0bfd790b2c7acf984b2a555434499aa23a485fcd45df807c2d16392a",
+      "sourceWidth": 1920,
+      "sourceHeight": 1080,
+      "width": 1600,
+      "height": 900,
+      "bytes": 51164,
+      "sha256": "044cdaa7199d5ffb6475d86db99fe4ece2353f423ed0b530724ebe1cf48a58c0"
+    },
+    {
+      "file": "windows-drawing.webp",
+      "source": "live_agent/windows-app/store-listing/media/03-drawing.png",
+      "sourceSha256": "21480962eadca223d27f30ac624bcd0577d2599aed41990109b65a9720bb464e",
+      "sourceWidth": 1920,
+      "sourceHeight": 1080,
+      "width": 1200,
+      "height": 675,
+      "bytes": 14614,
+      "sha256": "310b2db4ecb39467ba946d7d32143ca97f940d2132765b0d4c667224ba79807f"
+    },
+    {
+      "file": "iphone-home.webp",
+      "source": "Homework Helper video handoff/iOS walkthrough/Source/screenshots/final/iphone/01-home.png",
+      "sourceSha256": "fa96b013989f4b26a73f01027d9a8d3f8103083dd27342e08b3471aa3c3af5c7",
+      "sourceWidth": 1206,
+      "sourceHeight": 2622,
+      "width": 600,
+      "height": 1304,
+      "bytes": 17374,
+      "sha256": "7ab6c5c98a09ff5742a217abb6f60bc9e37ccac8f1e88764ac11de4d4ee5e95c"
+    },
+    {
+      "file": "iphone-worksheet.webp",
+      "source": "Homework Helper video handoff/iOS walkthrough/Source/screenshots/final/iphone/03-worksheet.png",
+      "sourceSha256": "c6d07ae40afc1a8deaac7235c50bf06418b90b2e01bdad9a49892f5f00f33117",
+      "sourceWidth": 1206,
+      "sourceHeight": 2622,
+      "width": 720,
+      "height": 1565,
+      "bytes": 40018,
+      "sha256": "14094d9fd7497f8e687340c0738e52403615ff68e90f4c80517f974936fd776a"
+    },
+    {
+      "file": "study-art.webp",
+      "source": "live_agent/windows-app/store-listing/artwork/hero-source.png",
+      "sourceSha256": "6ef1044508951b81b10dd16326bc24a14c6735925abb7f08e7de6120a10f2c12",
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "width": 1200,
+      "height": 675,
+      "bytes": 55272,
+      "sha256": "7a0a1d651dd5d9a86e809c3b41a03e2f766ded923e1d1280555693d222b18da7"
+    },
+    {
+      "file": "app-icon.png",
+      "source": "live_agent/windows-app/store-listing/artwork/app-icon-source.png",
+      "sourceSha256": "94be313aa55defb3c4cacd91f76e627d9e6e9a3bd5178aa77673325779a39371",
+      "sourceWidth": 512,
+      "sourceHeight": 512,
+      "width": 256,
+      "height": 256,
+      "bytes": 40290,
+      "sha256": "2ee4d24ec6ec6d79b18cfc4864e212e690bb3439c8a09326093859ff6af6b6ef"
+    }
+  ],
+  "demos": [
+    {
+      "platform": "android",
+      "file": "android-demo.mp4",
+      "source": "Homework Helper video handoff/Android walkthrough/homework-helper-android-preview.mp4",
+      "sourceSha256": "2dd433725abdc8c72fc3c88928533e27126ed767f3faeb08ab364cf207cc436d",
+      "sourceMetadata": {
+        "width": 1080,
+        "height": 2410,
+        "duration": 89.066667,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioRate": "48000",
+        "audioChannels": 2,
+        "fps": "30/1"
+      },
+      "width": 404,
+      "height": 900,
+      "duration": 89.066667,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "audioRate": "48000",
+      "audioChannels": 2,
+      "fps": "30/1",
+      "bytes": 3474582,
+      "sha256": "4d678bbce2cef1271a4463f4a2dd3fb76db60921de9fc0097788787f0e6f6382",
+      "fullDecode": "passed",
+      "caption": {
+        "file": "android-demo.vtt",
+        "source": "Homework Helper video handoff/Android walkthrough/homework-helper-android.vtt",
+        "sourceSha256": "7a894f67a075810d136f2aff9fb52ae709dcbe91d62fade9f55bd4c8a80fe7ce",
+        "sha256": "7a894f67a075810d136f2aff9fb52ae709dcbe91d62fade9f55bd4c8a80fe7ce"
+      },
+      "poster": {
+        "file": "android-poster.webp",
+        "source": "Homework Helper video handoff/Android walkthrough/homework-helper-android-thumbnail.png",
+        "sourceSha256": "ec975da1407a8ed9b9659bac3cfd08dc26df1ad06d9239a277e5106bfc93e71a",
+        "sha256": "359c4d721dde0a6351f956fc88df43a2333375a80224a62797d67c4a3b1cf1cd",
+        "bytes": 42422
+      }
+    },
+    {
+      "platform": "iphone",
+      "file": "iphone-demo.mp4",
+      "source": "Homework Helper video handoff/iOS walkthrough/Walkthrough/homework-helper-ios-iphone-walkthrough.mp4",
+      "sourceSha256": "928664515c0eb10368e6fc98d9c368aaf0ebcac1c377bf37baa3d2b73bfdd9ba",
+      "sourceMetadata": {
+        "width": 886,
+        "height": 1920,
+        "duration": 53.066667,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioRate": "48000",
+        "audioChannels": 2,
+        "fps": "30/1"
+      },
+      "width": 416,
+      "height": 900,
+      "duration": 53.066667,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "audioRate": "48000",
+      "audioChannels": 2,
+      "fps": "30/1",
+      "bytes": 1739359,
+      "sha256": "c75793acc34f6b35c5b80cf799a732c25c5003c9c1ad9f3328197913aa79c2cd",
+      "fullDecode": "passed",
+      "caption": {
+        "file": "iphone-demo.vtt",
+        "source": "Homework Helper video handoff/iOS walkthrough/Source/video/iphone-walkthrough-v2/homework-helper-ios-iphone.vtt",
+        "sourceSha256": "87778fff846350da247c5c1a9816a355f0e0776b67d59df9ea683f10c8d22f6c",
+        "sha256": "87778fff846350da247c5c1a9816a355f0e0776b67d59df9ea683f10c8d22f6c"
+      },
+      "poster": {
+        "file": "iphone-poster.webp",
+        "source": "Homework Helper video handoff/iOS walkthrough/Source/video/iphone-walkthrough-v2/homework-helper-ios-iphone-thumbnail.png",
+        "sourceSha256": "6b6a5ba52dd6659493a656f85806955bee6126390015fa628e1f43b3180773fb",
+        "sha256": "730391154143ccb3f5ebc3ef93ff95c05e1f2daf1942614e0260b61dca72ac7e",
+        "bytes": 48132
+      }
+    },
+    {
+      "platform": "ipad",
+      "file": "ipad-demo.mp4",
+      "source": "Homework Helper video handoff/iOS walkthrough/iPad/homework-helper-ios-ipad-app-preview.mp4",
+      "sourceSha256": "82a6cce85dec33612aca010095fed5d62f9aac2d74298c10b72cd759ba9f9768",
+      "sourceMetadata": {
+        "width": 1200,
+        "height": 1600,
+        "duration": 29.566667,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioRate": "48000",
+        "audioChannels": 2,
+        "fps": "30/1"
+      },
+      "width": 676,
+      "height": 900,
+      "duration": 29.566667,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "audioRate": "48000",
+      "audioChannels": 2,
+      "fps": "30/1",
+      "bytes": 1319420,
+      "sha256": "90640632313d9e7120d882ef7483044a7416c8a9ee2427f90c6410033d5a8bce",
+      "fullDecode": "passed",
+      "caption": {
+        "file": "ipad-demo.vtt",
+        "source": "Homework Helper video handoff/iOS walkthrough/Source/video/ipad-preview-v2/homework-helper-ios-ipad.vtt",
+        "sourceSha256": "42c4a97e91a635ac3fd0b9ee1ffaa380597ed030c66a1ccc4ba3c8fe7cb5f2d1",
+        "sha256": "42c4a97e91a635ac3fd0b9ee1ffaa380597ed030c66a1ccc4ba3c8fe7cb5f2d1"
+      },
+      "poster": {
+        "file": "ipad-poster.webp",
+        "source": "Homework Helper video handoff/iOS walkthrough/Source/video/ipad-preview-v2/homework-helper-ios-ipad-thumbnail.png",
+        "sourceSha256": "2e0e0e4b0164b4b80a8ad07d503cc2692e508c18ece5b68e3b24329281842cf1",
+        "sha256": "c56f5953e455a64389e2b4358561150c0337a6e43a3b0231a995deafdcea7313",
+        "bytes": 35086
+      }
+    },
+    {
+      "platform": "windows",
+      "file": "windows-demo.mp4",
+      "source": "Homework Helper video handoff/Windows walkthrough/homework-helper-windows-preview.mp4",
+      "sourceSha256": "c3021918bc20d1200b09de8b505762856d247143be4ef09c5e520916fba19a38",
+      "sourceMetadata": {
+        "width": 1920,
+        "height": 1080,
+        "duration": 69.666667,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "audioRate": "48000",
+        "audioChannels": 2,
+        "fps": "30/1"
+      },
+      "width": 1280,
+      "height": 720,
+      "duration": 69.666667,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "audioRate": "48000",
+      "audioChannels": 2,
+      "fps": "30/1",
+      "bytes": 4036243,
+      "sha256": "b7f267f71dabf397d5b0766bf6552eef9af54811b62a4fe4900eb6aec930dd65",
+      "fullDecode": "passed",
+      "caption": {
+        "file": "windows-demo.vtt",
+        "source": "Homework Helper video handoff/Windows walkthrough/homework-helper-windows.vtt",
+        "sourceSha256": "61566dc19db13d60136e276960f5d6ceabf863890e4988b543b24cfe4a41bfb7",
+        "sha256": "61566dc19db13d60136e276960f5d6ceabf863890e4988b543b24cfe4a41bfb7"
+      },
+      "poster": {
+        "file": "windows-poster.webp",
+        "source": "Homework Helper video handoff/Windows walkthrough/homework-helper-windows-thumbnail.png",
+        "sourceSha256": "45e01b97850364192c5c62244191ddc0001ca6416e02f31017c8a35d31c39a94",
+        "sha256": "aa41da305b489390ec22c796fc24e70d4f8816e48a2d56b5fb4df69b14150998",
+        "bytes": 50390
+      }
+    }
+  ],
+  "totalBytes": 11166566
+}

@@ -268,7 +268,7 @@ require_once 'config.php';
     <!-- Header -->
     <?php include '_components/header.php'; ?>
 
-    <div class="container">
+    <div id="main" class="container">
         <div class="header">
             <h1>Terms of Service</h1>
             <p><?php echo $common['appName']; ?> Application</p>

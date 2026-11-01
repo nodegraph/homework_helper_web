@@ -1,169 +1,74 @@
-![SCR-20250821-tain](https://github.com/user-attachments/assets/b832addf-285f-44ee-a751-71d78927bcdf)
+# Homework Helper website
 
-# Modern App Landing Page Template
+The PHP marketing website at **homeworkhelper.dev**, using real app recordings,
+screenshots and existing promotional artwork. The November 2026 redesign keeps
+the existing Google Play, Apple App Store, Microsoft Store and Chrome Web Store
+destinations, including while those stores serve the previous app versions.
 
-A professional, ready-to-use landing page template for mobile apps. Built with PHP and Tailwind CSS, this template is designed for developers who want to quickly create a beautiful website for their mobile application.
+## Local development
 
-## 🚀 Quick Setup (5 Minutes)
-
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Build CSS**:
-   ```bash
-   npm run build
-   ```
-
-3. **Customize your app** (see below)
-
-4. **Launch**:
-   ```bash
-   php -S localhost:8000
-   ```
-
-## 📝 How to Customize for Your App
-
-### Step 1: Update App Information
-Edit `config.php` and update these basic details:
-
-```php
-$common = [
-    'appName' => "Your App Name",                    // Replace with your app name
-    'appTitle' => "Your app tagline here",           // Main headline
-    'appDescription' => "Describe what your app does", // App description
-    'appIcon' => "/assets/app_icon.webp",            // Your app icon
-    'supportEmail' => "support@yourapp.com",         // Your support email
-    'appStoreUrl' => "https://apps.apple.com/...",   // Your App Store link
-    'googlePlayUrl' => "https://play.google.com/...", // Your Google Play link
-    'screenshotRoundedCorners' => true,              // true = rounded, false = sharp corners
-];
+```sh
+npm install
+npm run build
+php -S 127.0.0.1:8092 -t .
 ```
 
-### Step 2: Add Your App Screenshots
-1. Place your screenshots in the `/assets/` folder
-2. Update the paths in `config.php`:
+Open `http://127.0.0.1:8092`. On Windows use `npm.cmd` if PowerShell blocks npm.
+The preview requires PHP; serving the directory as plain static files will not
+render templates. `npm run build-css` watches the legacy Tailwind stylesheet.
 
-```php
-// Hero section screenshot
-$home = [
-    "screenshot" => "/assets/your_main_screenshot.png",
-];
+## Editing
 
-// Feature screenshots
-$featuresScreenshots = [
-    "featuresList" => [
-        [
-            "title" => "Easy Setup",
-            "description" => "Get started in minutes",
-            "image" => "/assets/feature_1.png",      // Your screenshot here
-        ],
-        [
-            "title" => "Smart Notifications", 
-            "description" => "Never miss important updates",
-            "image" => "/assets/feature_2.png",      // Your screenshot here
-        ],
-        // Add more features...
-    ]
-];
-```
+- `index.php`: homepage, platform demo data and download section.
+- `assets/site.css`: responsive design, shared navigation and supporting pages.
+- `assets/site.js`: accessible demo tabs, on-demand video playback and mobile nav.
+- `_components/`: shared metadata, header, footer and small inline SVG icons.
+- `contact.php`, `faq.php`: current support and product information.
+- `config.php`: existing store URLs and settings used by legacy routes.
+- `assets/showcase/`: compressed derivatives of the latest promotional media.
+- `docs/media-provenance.json`: source references, hashes and transformations.
 
-### Step 3: Customize App Features
-Update the features that appear on your homepage:
+The video selector supports arrow keys, Home and End. Each video retains its
+actual app footage, original tutor audio and distinct action narrator, with
+English WebVTT captions. No MP4 loads until playback is requested. Selecting
+another device or hiding the page pauses playback. The videos have native
+controls and a direct-file fallback; all four are linked without JavaScript.
 
-```php
-// Features with icons (no screenshots needed)
-$featuresIcons = [
-    "featuresList" => [
-        [
-            "title" => "Fast & Reliable",
-            "description" => "Lightning fast performance",
-            "icon" => "speed",                       // Material Design icon name
-        ],
-        [
-            "title" => "Secure",
-            "description" => "Your data is always protected", 
-            "icon" => "security",
-        ],
-    ]
-];
-```
+Images are proportionally resized WebP exports. Videos are H.264/AAC MP4s with
+faststart, proportional scaling and no edits to the source timeline. Sources
+remain in the live_agent store-listing directories and the operator's Homework
+Helper video handoff. The entire new media set is approximately 11 MB; media is
+served locally, without loading a YouTube player or advertising SDK.
 
-### Step 4: Add Customer Reviews
-```php
-$ratings = [
-    "ratingsList" => [
-        [
-            "title" => "John Smith",
-            "description" => "This app changed how I work!",
-            "rating" => 5,
-            "image" => "/assets/user_1.jpg",         // User photo (optional)
-        ],
-        // Add more reviews...
-    ]
-];
-```
+## Release notes
 
-### Step 5: Update Footer & Contact Info
-```php
-$footer = [
-    'navigation' => [
-        ['title' => 'About', 'link' => '/about'],
-        ['title' => 'Features', 'link' => '/features'],
-        ['title' => 'Support', 'link' => '/contact'],
-    ],
-    'socials' => [
-        ['title' => 'Twitter', 'link' => 'https://twitter.com/yourapp'],
-        ['title' => 'Instagram', 'link' => 'https://instagram.com/yourapp'],
-    ],
-];
-```
+The new app updates were still under store review when these pages were
+prepared. The demo section states this explicitly. Update that short note only
+after confirming the corresponding releases are publicly available. Existing
+store links stay usable throughout review. The Chrome extension link is kept
+separate from the four redesigned app demos.
 
-## 🎨 Design Options
+The footer links to the current Homework Helper privacy policy. Legacy PHP
+policy and reward routes are preserved for existing callers. No review claims,
+ratings, guaranteed grades or unverified testimonials are added to the new site.
 
-### Screenshot Corners
-Set `'screenshotRoundedCorners' => false` in config.php for sharp, modern corners, or `true` for friendly rounded corners.
+Vercel currently deploys PHP plus `assets/**` and `dist/**`. Rebuild and commit
+`dist/output.css` when changing Tailwind template classes. `assets/site.css` and
+`assets/site.js` are served directly. Local commits do not publish the site;
+deployment is a separate step.
 
-### Colors
-The template uses a clean blue color scheme that works well for most apps. All colors are customizable through Tailwind CSS classes.
+## Verification (November 1, 2026)
 
-## 📱 What You Get
-
-- **Homepage**: Hero section, features, reviews, download CTA
-- **Contact Page**: Contact form and information
-- **FAQ Page**: Expandable questions and answers
-- **Legal Pages**: Privacy policies and terms (required for app stores)
-- **Smart Downloads**: Automatically detects user's device and shows correct download link
-
-## 🚀 Going Live
-
-1. **Build for production**:
-   ```bash
-   npm run build
-   ```
-
-2. **Upload files** to your web server
-
-3. **Update app store links** in config.php with your real URLs
-
-4. **Test on mobile** to ensure everything works correctly
-
-## 💡 Tips for Success
-
-- **Use high-quality screenshots** - they're the most important element
-- **Keep descriptions short** and focused on benefits
-- **Add real customer reviews** - they build trust
-- **Test on mobile devices** - most visitors will be on phones
-- **Update app store ratings** regularly in config.php
-
-## 🆘 Need Help?
-
-- Check `config.php` - 90% of customization happens there
-- All images go in `/assets/` folder
-- Run `npm run build` after making changes
-- Test with `php -S localhost:8000`
-
----
-
-**Ready to showcase your app? Start customizing config.php! 🚀**
+- Production CSS build, all changed PHP syntax checks and JavaScript syntax pass.
+- Homepage, FAQ, contact and preserved legacy routes return HTTP 200.
+- All four original store URLs match the preceding revision exactly.
+- Download redirects checked for Android, iPhone, iPad desktop user agent,
+  Windows, Linux and an absent user agent.
+- Chrome layout checks at 320, 390, 768, 1024 and 1440 pixels show no horizontal
+  overflow. Desktop and mobile layouts were visually reviewed.
+- All four videos start playback, report no media error and load English caption
+  cues (Android 23, iPhone 7, iPad 7, Windows 19). Full FFmpeg decode checks pass.
+- MP4 requests are absent on initial page load. Arrow/Home/End navigation selects
+  the matching demo and moves focus; mobile navigation closes after selection.
+- Browser console contains no errors or warnings. Shared skip links have content
+  targets, and the FAQ uses native accessible disclosure controls.

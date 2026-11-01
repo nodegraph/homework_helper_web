@@ -1,38 +1,33 @@
-<?php 
+<?php
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/BrowserDetection.php';
 
-// Include config for app store URLs
-require_once 'config.php';
+$userAgent = isset($_SERVER['HTTP_USER_AGENT']) && is_string($_SERVER['HTTP_USER_AGENT'])
+    ? $_SERVER['HTTP_USER_AGENT']
+    : '';
+$browser = new foroco\BrowserDetection();
+$device = $browser->getOS($userAgent);
+$osFamily = strtolower($device['os_family'] ?? '');
+$redirectUrl = '/#download';
 
-include "BrowserDetection.php";
+// Some iPads identify as Macintosh but still include Apple's Mobile token.
+// A plain Macintosh user agent remains on the platform chooser.
+$ipadDesktopAgent = preg_match('/Macintosh/i', $userAgent)
+    && preg_match('/\bMobile\//i', $userAgent);
+$iosDevice = in_array($osFamily, ['ios', 'iphone', 'ipad'], true)
+    || strtolower($device['os_name'] ?? '') === 'ios'
+    || preg_match('/\b(?:iPhone|iPad|iPod)\b/i', $userAgent)
+    || $ipadDesktopAgent;
 
-$Browser = new foroco\BrowserDetection();
-
-$useragent = $_SERVER['HTTP_USER_AGENT'];
-
-// Get OS data (array):
-$result = $Browser->getOS($useragent);
-
-// Determine redirect URL based on OS
-$redirectUrl = '/'; // Default to homepage
-
-if (isset($result['os_family'])) {
-    $osFamily = strtolower($result['os_family']);
-    
-    // Check for Android
-    if ($osFamily === 'android' && !empty($common['googlePlayUrl'])) {
-        $redirectUrl = $common['googlePlayUrl'];
-    }
-    // Check for iOS (iPhone/iPad)
-    elseif (($osFamily === 'ios' || $osFamily === 'iphone' || $osFamily === 'ipad') && !empty($common['appStoreUrl'])) {
-        $redirectUrl = $common['appStoreUrl'];
-    }
-    // For desktop/other OS, check if we have any app store URL as fallback
-    elseif ($osFamily === 'desktop' || $osFamily === 'macintosh' || $osFamily === 'windows' || $osFamily === 'linux') {
-        // For desktop, try App Store first (for macOS), then Google Play, then homepage
-        $redirectUrl = '/';
-    }
+if ($osFamily === 'android' && !empty($common['googlePlayUrl'])) {
+    $redirectUrl = $common['googlePlayUrl'];
+} elseif ($iosDevice && !empty($common['appStoreUrl'])) {
+    $redirectUrl = $common['appStoreUrl'];
+} elseif ($osFamily === 'windows' && !empty($common['microsoftStoreUrl'])) {
+    $redirectUrl = $common['microsoftStoreUrl'];
 }
 
-// Perform the redirect
-header("Location: " . $redirectUrl);
-exit();
+header('Cache-Control: private, no-store');
+header('Vary: User-Agent');
+header('Location: ' . $redirectUrl, true, 302);
+exit;

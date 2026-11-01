@@ -1,80 +1,55 @@
 <?php
-// Include config for global variables
-require_once 'config.php';
+require_once __DIR__ . '/config.php';
+$pageTitle = 'Questions, answered';
+$pageDescription = 'Quick answers about Homework Helper, supported devices, AI study help, and privacy.';
+$canonicalUrl = 'https://homeworkhelper.dev/faq.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php 
-    $pageTitle = "FAQs";
-    $pageDescription = $faqs['description'];
-    include '_components/meta.php'; 
-    ?>
+    <?php include __DIR__ . '/_components/meta.php'; ?>
 </head>
-<body class="bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen font-body">
-    <!-- Header -->
-    <?php include '_components/header.php'; ?>
-    
-    <!-- FAQ Section -->
-    <section class="pt-24 pb-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Page Header -->
-            <div class="text-center mb-12">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4"><?php echo $faqs['title']; ?></h1>
-                <p class="text-xl text-gray-600"><?php echo $faqs['description']; ?></p>
-            </div>
-            
-            <!-- FAQ Categories -->
-            <?php foreach ($faqs['faqsList'] as $categoryIndex => $category): ?>
-                <div class="mb-12">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6"><?php echo $category['title']; ?></h2>
-                    
-                    <div class="space-y-4">
-                        <?php foreach ($category['faqs'] as $faqIndex => $faq): ?>
-                            <div class="bg-white rounded-lg border border-gray-200 shadow-sm">
-                                <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
-                                        onclick="toggleFaq('faq-<?php echo $categoryIndex; ?>-<?php echo $faqIndex; ?>')">
-                                    <span class="text-lg font-medium text-gray-900"><?php echo $faq['title']; ?></span>
-                                    <span class="material-icons transform transition-transform duration-200" id="icon-faq-<?php echo $categoryIndex; ?>-<?php echo $faqIndex; ?>">expand_more</span>
-                                </button>
-                                <div class="hidden px-6 pb-4" id="faq-<?php echo $categoryIndex; ?>-<?php echo $faqIndex; ?>">
-                                    <p class="text-gray-600 leading-relaxed"><?php echo $faq['description']; ?></p>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-            
-            <!-- Contact Support -->
-            <div class="mt-16 text-center bg-white rounded-xl border border-gray-200 p-8">
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Still have questions?</h3>
-                <p class="text-gray-600 mb-6">Can't find the answer you're looking for? Please chat with our friendly team.</p>
-                <a href="mailto:<?php echo $common['supportEmail']; ?>" 
-                   class="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200">
-                    <span class="material-icons mr-2">email</span>
-                    Contact Support
-                </a>
-            </div>
+<body class="site-page">
+    <?php include __DIR__ . '/_components/header.php'; ?>
+    <main id="main" class="page-wrap section-wrap">
+        <p class="page-kicker">Good to know</p>
+        <h1 class="page-title">Questions, answered.</h1>
+        <p class="page-lede">The essentials before you jump in.</p>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Who is Homework Helper for?</summary>
+                <p>Teens aged 13 and older and adults. Review a topic, work through a problem, or ask a follow-up question at your own pace.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Which helper should I choose?</summary>
+                <p>Start with Homework Helper for a question of your own. Choose Math Teacher, Language Teacher, or Science Teacher to explore available courses and guided activities.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can I show a question instead of typing it?</summary>
+                <p>Yes. Share an image, take a photo, or use the drawing tools to show what you're working on. You can also speak or type during a call.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Does it work on my device?</summary>
+                <p>Homework Helper has apps for Android, iPhone, iPad, and Windows. Check your device's store listing for compatibility. Store updates may arrive at different times.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Do I need an internet connection?</summary>
+                <p>Yes. Calls use our online AI service and microphone access. You may see a queue when available helpers are busy. Camera access is only needed when you take a photo.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Are the answers always right?</summary>
+                <p>AI can make mistakes. Use the explanations to explore ideas, and check important answers against your course materials or with a teacher. You can report a response directly from the chat.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How do I manage my data?</summary>
+                <p>Open Settings &rarr; Privacy in the app for privacy information and account-deletion controls. See our <a href="https://www.faviclone.com/homework-helper/privacy">privacy policy</a> or <a href="https://www.faviclone.com/homework-helper/delete-data">data-deletion guidance</a> for more.</p>
+            </details>
         </div>
-    </section>
-    
-    <!-- Footer -->
-    <?php include '_components/footer.php'; ?>
-    
-    <script>
-        function toggleFaq(faqId) {
-            const faqContent = document.getElementById(faqId);
-            const icon = document.getElementById('icon-' + faqId);
-            
-            if (faqContent.classList.contains('hidden')) {
-                faqContent.classList.remove('hidden');
-                icon.textContent = 'expand_less';
-            } else {
-                faqContent.classList.add('hidden');
-                icon.textContent = 'expand_more';
-            }
-        }
-    </script>
+        <div class="faq-contact">
+            <p>Something else on your mind?</p>
+            <a class="button button-secondary" href="/contact.php">Get in touch</a>
+        </div>
+    </main>
+    <?php include __DIR__ . '/_components/footer.php'; ?>
 </body>
 </html>
