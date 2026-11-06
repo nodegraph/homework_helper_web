@@ -77,7 +77,6 @@ $platforms = [
             <a class="download-card" href="<?= htmlspecialchars($common['tryNowUrl'], ENT_QUOTES, 'UTF-8') ?>"><?= siteIcon('web') ?><span><strong>Web</strong><small>Try it in your browser</small></span><?= siteIcon('arrow') ?></a>
         </div>
         <p class="download-note">For teens 13+ and adults. Internet required. AI can make mistakes; check important answers.</p>
-        <p class="chrome-link">On your browser? <a href="<?= htmlspecialchars($common['chromeWebStoreUrl'], ENT_QUOTES, 'UTF-8') ?>">Get the Chrome extension</a></p>
     </section>
 </main>
 <?php include __DIR__ . '/_components/footer.php'; ?>

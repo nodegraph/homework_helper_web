@@ -261,8 +261,6 @@ h1, h2, h3 { font-family: var(--font); text-wrap: balance; }
 .download-card strong { display: block; font-size: 17px; font-weight: 800; }
 .download-card small { display: block; font-size: 13px; color: var(--muted); margin-top: 5px; line-height: 1.5; }
 .download-note { grid-column: 1/-1; margin-top: 26px; font-size: 14px; color: var(--muted); text-align: center; }
-.chrome-link { grid-column: 1/-1; text-align: center; font-size: 15px; margin-top: 18px; }
-.chrome-link a { text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
 .site-footer { background: var(--soft); border-top: 1px solid var(--line); }
 .footer-top { padding-block: 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .footer-top .brand { font-size: 17px; }
@@ -382,7 +380,7 @@ h1, h2, h3 { font-family: var(--font); text-wrap: balance; }
   .download-intro h2 { font-size: 50px; }
   .download-art { max-width: 520px; margin: auto; }
   .download-grid { margin-top: 0; gap: 14px; }
-  .download-note, .chrome-link { margin: 0; }
+  .download-note { margin: 0; }
   .footer-top { gap: 20px; }
   .footer-top > p { flex: auto; text-align: left; }
   .footer-top nav { gap: 22px; }
