@@ -1,5 +1,57 @@
 (() => {
   "use strict";
+  const themeKey = "homework-helper-theme";
+  const themeRoot = document.documentElement;
+  const themeButton = document.querySelector(".theme-toggle");
+  const validTheme = (value) => value === "light" || value === "dark";
+  let themePreference = null;
+  try {
+    const storedTheme = localStorage.getItem(themeKey);
+    if (validTheme(storedTheme)) themePreference = storedTheme;
+  } catch {
+    // Keep the toggle usable in browsers that disable local storage.
+  }
+
+  function applyTheme(theme) {
+    themeRoot.dataset.theme = theme;
+    themeRoot.style.colorScheme = theme;
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) {
+      themeColor.content = theme === "dark" ? "#141917" : "#faf9f6";
+    }
+    if (themeButton) {
+      const action = `Switch to ${theme === "dark" ? "light" : "dark"} mode`;
+      themeButton.setAttribute("aria-label", action);
+      themeButton.title = action;
+      themeButton.querySelector(".theme-toggle-label").textContent =
+        theme === "dark" ? "Dark" : "Light";
+    }
+  }
+
+  function followThemePreference() {
+    applyTheme(themePreference || "light");
+  }
+
+  followThemePreference();
+  if (themeButton) {
+    themeButton.hidden = false;
+    themeButton.addEventListener("click", () => {
+      themePreference = themeRoot.dataset.theme === "dark" ? "light" : "dark";
+      applyTheme(themePreference);
+      try {
+        localStorage.setItem(themeKey, themePreference);
+      } catch {
+        // An explicit choice remains active for this visit without storage.
+      }
+    });
+  }
+  window.addEventListener("storage", (event) => {
+    if (event.key === themeKey || event.key === null) {
+      themePreference = validTheme(event.newValue) ? event.newValue : null;
+      followThemePreference();
+    }
+  });
+
   document.querySelectorAll(".mobile-nav a").forEach((link) => {
     link.addEventListener("click", () => {
       link.closest("details").open = false;

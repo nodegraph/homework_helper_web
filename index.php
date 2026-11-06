@@ -17,7 +17,7 @@ $platforms = [
     <section class="hero section-wrap" aria-labelledby="hero-heading">
         <div class="hero-copy">
             <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR STUDY SIDEKICK</p>
-            <h1 id="hero-heading">Less stuck.<br>More <em>aha.</em></h1>
+            <h1 id="hero-heading">Less stuck.<br>More <em>aha.</em><span class="hero-spark"><?= siteIcon('spark') ?></span></h1>
             <p class="hero-description">That tricky question? Let’s work it out.<br class="desktop-break"> Talk, snap, or sketch your way to understanding with an AI study companion.</p>
             <div class="hero-actions"><a class="button button-primary" href="<?= htmlspecialchars($common['tryNowUrl'], ENT_QUOTES, 'UTF-8') ?>">Try it now <?= siteIcon('arrow') ?></a><a class="button button-secondary" href="#download">Find your app</a><a class="button button-text" href="#in-action"><?= siteIcon('play') ?> Watch a demo</a></div>
             <p class="hero-platforms">Android <span>·</span> iPhone <span>·</span> iPad <span>·</span> Windows</p>
@@ -27,6 +27,7 @@ $platforms = [
             <div class="hero-tablet device-frame"><img src="/assets/showcase/ipad-chat.webp" width="1000" height="1333" alt="Homework Helper on iPad, discussing an uploaded science worksheet" fetchpriority="high"></div>
             <div class="hero-phone device-frame"><img src="/assets/showcase/iphone-chat.webp" width="720" height="1565" alt="Homework Helper’s speaking avatar and an algebra explanation on iPhone" fetchpriority="high"></div>
             <span class="hero-sticker">Let’s work<br>it out. <span aria-hidden="true">↗</span></span>
+            <span class="hero-note"><?= siteIcon('chat') ?> One question at a time.</span>
             <span class="hero-visual-caption">Real app recordings. AI-powered conversations.</span>
         </div>
     </section>

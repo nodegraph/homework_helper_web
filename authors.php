@@ -17,7 +17,7 @@ $authorsPage = [
     include '_components/meta.php'; 
     ?>
 </head>
-<body class="bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen font-body">
+<body class="site-page legacy-page min-h-screen font-body">
     <!-- Header -->
     <?php include '_components/header.php'; ?>
     

@@ -12,259 +12,118 @@ require_once 'config.php';
     include '_components/meta.php';
     ?>
     <style>
-        /* Modern Privacy Policy CSS - Universal Design */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.7;
-            color: #2d3748;
-            background: #f7fafc;
+        /* Keep policy typography and surfaces in step with the shared theme. */
+        body.policy-page {
+            font-family: var(--font);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.8;
+            color: var(--ink);
+            background: var(--paper);
             min-height: 100vh;
         }
-
-        .container {
-            max-width: 900px;
+        .policy-page #main.container {
+            width: min(960px, calc(100% - 40px));
+            max-width: none;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 48px 0;
+            overflow-wrap: anywhere;
         }
-
-        .header {
+        .policy-page .header {
             text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 1rem;
-            margin-bottom: 2rem;
+            padding: 36px 24px;
+            color: var(--ink);
+            background: var(--accent-soft);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            margin-bottom: 32px;
         }
-
-        .header h1 {
-            font-size: 2.75rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .policy-page .header h1 {
+            font-size: clamp(32px, 5vw, 46px);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin-bottom: 12px;
         }
-
-        .header p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            font-weight: 300;
+        .policy-page .header p { font-size: 20px; font-weight: 600; }
+        .policy-page .content {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: clamp(24px, 5vw, 48px);
+            margin-bottom: 32px;
         }
-
-        .content {
-            background: white;
-            border-radius: 1rem;
-            padding: 3rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border: 1px solid #e2e8f0;
-            margin-bottom: 2rem;
-        }
-
-        /* Section Styling */
-        .content > strong {
+        .policy-page .content h1,
+        .policy-page .content h2,
+        .policy-page .content h3,
+        .policy-page .content > strong {
             display: block;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2d3748;
-            margin: 2.5rem 0 1.5rem 0;
-            padding: 1rem 0 0.75rem 0;
-            border-bottom: 3px solid #667eea;
-            position: relative;
+            color: var(--ink);
+            font-weight: 800;
+            line-height: 1.35;
+            margin: 32px 0 16px;
         }
-
-        .content > strong:first-child {
-            margin-top: 0;
-            font-size: 1.75rem;
-            color: #667eea;
-            text-align: center;
-            border-bottom: none;
-            padding-bottom: 1.5rem;
-        }
-
-        .content > strong::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
-
-        .content > strong:first-child::after {
-            display: none;
-        }
-
-        /* Paragraph Styling */
-        .content p {
-            margin-bottom: 1.25rem;
+        .policy-page .content h1 { font-size: 30px; }
+        .policy-page .content h2,
+        .policy-page .content > strong { font-size: 25px; }
+        .policy-page .content h3 { font-size: 21px; }
+        .policy-page .content > :first-child { margin-top: 0; }
+        .policy-page .content p {
+            margin-bottom: 20px;
+            font-size: 18px;
             line-height: 1.8;
-            font-size: 1rem;
-            color: #4a5568;
+            color: var(--muted);
         }
-
-        /* List Styling */
-        .content ul,
-        .content ol {
-            margin: 1.5rem 0;
-            padding-left: 0;
-        }
-
-        .content li {
-            margin-bottom: 0.75rem;
-            line-height: 1.8;
-            position: relative;
-            padding-left: 2rem;
-            color: #4a5568;
-        }
-
-        .content ul li::before {
-            content: '•';
-            color: #667eea;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-        }
-
-        .content ol {
-            counter-reset: item;
-        }
-
-        .content ol li {
-            counter-increment: item;
-        }
-
-        .content ol li::before {
-            content: counter(item) '.';
-            color: #667eea;
+        .policy-page .content ul,
+        .policy-page .content ol { margin: 24px 0; padding-left: 26px; }
+        .policy-page .content ul { list-style: disc; }
+        .policy-page .content ol { list-style: decimal; }
+        .policy-page .content li { margin-bottom: 12px; color: var(--muted); }
+        .policy-page .content li::marker { color: var(--accent); }
+        .policy-page .content strong { color: var(--ink); font-weight: 700; }
+        .policy-page .content a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 4px;
             font-weight: 600;
-            position: absolute;
-            left: 0;
         }
-
-        /* Link Styling */
-        .content a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid transparent;
-            transition: all 0.2s ease;
+        .policy-page .content a:hover { text-decoration-thickness: 2px; }
+        .policy-page :is(.info-box, .warning-box, .contact-box, .effective-date) {
+            padding: 24px;
+            margin: 32px 0;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--soft);
+            color: var(--muted);
         }
-
-        .content a:hover {
-            color: #5a67d8;
-            border-bottom-color: #5a67d8;
-        }
-
-        /* Special Boxes */
-        .info-box {
-            background: linear-gradient(135deg, #ebf8ff 0%, #f0fff4 100%);
-            border: 1px solid #bee3f8;
-            border-left: 4px solid #667eea;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .warning-box {
-            background: linear-gradient(135deg, #fffbeb 0%, #fef5e7 100%);
-            border: 1px solid #fed7aa;
-            border-left: 4px solid #f59e0b;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .contact-box {
-            background: linear-gradient(135deg, #f0f9ff 0%, #ecfeff 100%);
-            border: 1px solid #bae6fd;
-            border-radius: 1rem;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-
-        .contact-box strong {
-            color: #0369a1;
-            font-size: 1.25rem;
-        }
-
-        /* Effective Date Styling */
-        .effective-date {
-            background: #f7fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.75rem;
-            padding: 1rem 1.5rem;
-            margin: 2rem 0;
-            font-style: italic;
-            color: #718096;
-            text-align: center;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem 0.5rem;
-            }
-            
-            .content {
-                padding: 2rem 1.5rem;
-            }
-            
-            .header h1 {
-                font-size: 2.25rem;
-            }
-            
-            .header p {
-                font-size: 1.125rem;
-            }
-            
-            .content > strong {
-                font-size: 1.25rem;
-            }
-            
-            .content > strong:first-child {
-                font-size: 1.5rem;
-            }
-        }
-
+        .policy-page :is(.info-box, .warning-box) { border-left: 4px solid var(--accent); }
+        .policy-page .contact-box { text-align: center; background: var(--accent-soft); }
+        .policy-page .contact-box strong { color: var(--ink); font-size: 21px; }
+        .policy-page .effective-date { font-style: italic; text-align: center; }
         @media (max-width: 480px) {
-            .content {
-                padding: 1.5rem 1rem;
-            }
-            
-            .content li {
-                padding-left: 1.5rem;
-            }
+            .policy-page #main.container { width: calc(100% - 32px); padding-block: 32px; }
+            .policy-page .content { padding: 24px 20px; }
+            .policy-page .content h1 { font-size: 28px; }
+            .policy-page .content h2 { font-size: 23px; }
         }
-
-        /* Print Styles */
         @media print {
-            body {
-                background: white;
+            body.policy-page {
+                --paper: #fff;
+                --surface: #fff;
+                --ink: #17221d;
+                --muted: #35453c;
+                --line: #ccc;
+                --soft: #f5f5f5;
+                --accent: #a02c23;
+                --accent-soft: #f5f5f5;
+                color-scheme: light;
             }
-            
-            .header {
-                background: #667eea !important;
-                -webkit-print-color-adjust: exact;
-            }
-            
-            .content {
-                box-shadow: none;
-                border: 1px solid #ccc;
-            }
+            .policy-page .content { box-shadow: none; }
         }
     </style>
 </head>
 
-<body>
+<body class="site-page policy-page">
     <!-- Header -->
     <?php include '_components/header.php'; ?>
 

@@ -8,7 +8,23 @@ $escapeMeta = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES,
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f7f8f2">
+<meta name="theme-color" content="#faf9f6">
+<script>
+(() => {
+    let preference;
+    try {
+        preference = localStorage.getItem('homework-helper-theme');
+    } catch {
+        // The theme still works when browser storage is unavailable.
+    }
+    const theme = preference === 'light' || preference === 'dark'
+        ? preference
+        : 'light';
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#141917' : '#faf9f6';
+})();
+</script>
 <title><?= $escapeMeta($siteTitle) ?></title>
 <meta name="description" content="<?= $escapeMeta($siteDescription) ?>">
 <link rel="canonical" href="<?= $escapeMeta($siteCanonical) ?>">
