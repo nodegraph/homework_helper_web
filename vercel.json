@@ -11,6 +11,10 @@
     {
       "src": "dist/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "app-ads.txt",
+      "use": "@vercel/static"
     }
   ]
 }
