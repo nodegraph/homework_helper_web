@@ -16,8 +16,8 @@ $canonicalUrl = 'https://homeworkhelper.dev/app-update.php';
         <h1 class="page-title">A new chat experience is coming.</h1>
         <p class="page-lede">Please check your device and keep your saved work before updating.</p>
         <div class="update-status" aria-label="Transition status">
-            <p><strong>Status: service transition starting.</strong> We are switching the backend for the new chat experience. New live calls may become unavailable during this work. The updated apps are still in private testing.</p>
-            <p>Transition started: November 13, 2026 at 8:27 p.m. Pacific time. A completion time is not yet confirmed.</p>
+            <p><strong>Status: live calls paused.</strong> New live avatar calls to Homework Helper are temporarily paused while we validate the new chat experience. The updated apps are still in private testing.</p>
+            <p>Live-call pause verified: November 13, 2026 at 8:58 p.m. Pacific time. A completion time is not yet confirmed.</p>
         </div>
         <section class="update-section" aria-labelledby="requirements">
             <h2 id="requirements">Check your device</h2>
