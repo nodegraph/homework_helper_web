@@ -75,6 +75,14 @@ h1, h2, h3, p { margin: 0; }
 h1, h2, h3 { font-family: var(--font); text-wrap: balance; }
 .icon { display: inline-block; vertical-align: middle; flex-shrink: 0; }
 .section-wrap { width: min(1240px, calc(100% - 96px)); margin-inline: auto; }
+.upgrade-banner { padding-block: 14px; background: var(--accent-soft); color: var(--ink); border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.6; }
+.upgrade-banner a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; font-weight: 700; }
+.update-status { padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.update-section { margin-top: 36px; }
+.update-section h2 { margin-bottom: 12px; font-size: 25px; font-weight: 700; line-height: 1.35; }
+.update-section p + p { margin-top: 16px; }
+.update-section ul { list-style: disc; padding-left: 1.4em; }
+.update-section li + li { margin-top: 12px; }
 .eyebrow, .page-kicker {
   font-size: 13px;
   font-weight: 800;

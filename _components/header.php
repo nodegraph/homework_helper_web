@@ -28,3 +28,9 @@ require_once __DIR__ . '/site-icons.php';
         </div>
     </div>
 </header>
+<aside class="upgrade-banner" aria-label="App update notice">
+    <div class="section-wrap">
+        A new chat experience is coming to Homework Helper and Classroom Helper.
+        <a href="/app-update.php">Check device requirements and transition details</a>
+    </div>
+</aside>
