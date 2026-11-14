@@ -16,8 +16,8 @@ $canonicalUrl = 'https://homeworkhelper.dev/app-update.php';
         <h1 class="page-title">A new chat experience is coming.</h1>
         <p class="page-lede">Please check your device and keep your saved work before updating.</p>
         <div class="update-status" aria-label="Transition status">
-            <p><strong>Status: preparing the update.</strong> The planned service transition has not started. A start time has not been announced.</p>
-            <p>Last updated: November 13, 2026 (Pacific time).</p>
+            <p><strong>Status: service transition starting.</strong> We are switching the backend for the new chat experience. New live calls may become unavailable during this work. The updated apps are still in private testing.</p>
+            <p>Transition started: November 13, 2026 at 8:27 p.m. Pacific time. A completion time is not yet confirmed.</p>
         </div>
         <section class="update-section" aria-labelledby="requirements">
             <h2 id="requirements">Check your device</h2>
@@ -36,7 +36,7 @@ $canonicalUrl = 'https://homeworkhelper.dev/app-update.php';
         <section class="update-section" aria-labelledby="availability">
             <h2 id="availability">Expect an interruption during the transition</h2>
             <p>The old live conversation service may be unavailable while we move to the new experience and the stores review the updates. Older installed apps may show a connection error instead of a maintenance or upgrade message.</p>
-            <p>A completion date is not confirmed because store review times vary. Updates may become available on different platforms at different times. We will update this page with the actual start time and recovery status when the transition begins.</p>
+            <p>A completion date is not confirmed because store review times vary. Updates may become available on different platforms at different times. We will update this page as backend testing and store reviews progress.</p>
         </section>
         <section class="update-section" aria-labelledby="saved-work">
             <h2 id="saved-work">Keep your app and saved work</h2>
