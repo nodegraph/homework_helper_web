@@ -1,0 +1,2 @@
+# Captions are byte-identical approved media; preserve their original line endings.
+assets/refresh-20261118/*.vtt -text whitespace=cr-at-eol,-blank-at-eof

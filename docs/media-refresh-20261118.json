@@ -1,0 +1,655 @@
+{
+  "schemaVersion": 1,
+  "kind": "approved-homework-helper-website-media-derivatives",
+  "createdAt": "2026-11-18T23:29:51.075Z",
+  "product": "Homework Helper",
+  "demos": [
+    {
+      "platform": "android",
+      "label": "Android",
+      "sourceDevice": "Actual Pixel native Android capture",
+      "video": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/homework-avatar-first-draft-04.mp4",
+          "sha256": "74de2f0f7e7dd37dad1be6bd3051e1669ae779128e3db607dde2cdc975f851c4",
+          "bytes": 8585876
+        },
+        "output": {
+          "file": "assets/refresh-20261118/android-demo.mp4",
+          "sha256": "74de2f0f7e7dd37dad1be6bd3051e1669ae779128e3db607dde2cdc975f851c4",
+          "bytes": 8585876,
+          "name": "android-demo.mp4",
+          "url": "/assets/refresh-20261118/android-demo.mp4"
+        },
+        "unchangedBytes": true,
+        "seconds": 55.267,
+        "dimensions": [
+          1080,
+          2144
+        ],
+        "fastStartVerified": true,
+        "container": "MP4"
+      },
+      "captions": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/draft04/narration-and-avatar.vtt",
+          "sha256": "c79ce21a91b1ff6af804849e156822afdb9715f97ff81ec07d9e6cdbced26a5b",
+          "bytes": 1227
+        },
+        "output": {
+          "file": "assets/refresh-20261118/android-demo.vtt",
+          "sha256": "c79ce21a91b1ff6af804849e156822afdb9715f97ff81ec07d9e6cdbced26a5b",
+          "bytes": 1227,
+          "name": "android-demo.vtt",
+          "url": "/assets/refresh-20261118/android-demo.vtt"
+        },
+        "unchangedBytes": true,
+        "cues": 9,
+        "orderedAndWithinVideo": true
+      },
+      "poster": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/screenshots-v2/screenshot-01.png",
+          "sha256": "d81445c863b563be7ae6ac0b7333ee2b823a0d67a89e6c53345005fa3eed894d",
+          "bytes": 631022,
+          "dimensions": [
+            1080,
+            2400
+          ]
+        },
+        "output": {
+          "file": "assets/refresh-20261118/android-poster.webp",
+          "sha256": "b390d3a97dbff1825e2ebff78a3b4a5e1ac60381c6977a9ba6a0c9b25bd15481",
+          "bytes": 111930,
+          "name": "android-poster.webp",
+          "dimensions": [
+            960,
+            2133
+          ],
+          "format": "webp",
+          "url": "/assets/refresh-20261118/android-poster.webp"
+        },
+        "transform": {
+          "operation": "uniform full-frame resize and WebP encoding",
+          "maximumWidth": 960,
+          "crop": false,
+          "retouch": false,
+          "quality": 88,
+          "effort": 4,
+          "colorSpace": "sRGB"
+        }
+      },
+      "approval": {
+        "file": "capacitor-app/store-listing/avatar-first-media/corrected-android-human-review-20261118.json",
+        "sha256": "7c6114ac66d7b2519caf791177bdf332523ef9d27f9f7770db20ed37935e3298",
+        "bytes": 3880,
+        "quote": "Both are synchronized",
+        "scope": "All avatar segments and endings in this exact corrected full export. Content, cuts, narration and music are unchanged from the preceding reviewed draft; this reply specifically confirms synchronization."
+      },
+      "posterApproval": {
+        "file": "capacitor-app/store-listing/avatar-first-media/android-windows-gallery-human-review-20261118.json",
+        "sha256": "54a505ca3005d48bb6e9d8184e36f9f916df60844be5fce47a7c174bd8456e00",
+        "bytes": 12199
+      }
+    },
+    {
+      "platform": "iphone",
+      "label": "iPhone",
+      "sourceDevice": "Native iPhone 18 Pro simulator; authorized feature-control tour",
+      "genuineIphoneSpeechDemonstrated": false,
+      "video": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/ios-iphone/draft01/homework-iphone-feature-tour.mp4",
+          "sha256": "e46b9ede10b419ac92c45377bd55f07c6dd703ce44bce03a2fdd2a0181a459a6",
+          "bytes": 7159850
+        },
+        "output": {
+          "file": "assets/refresh-20261118/iphone-demo.mp4",
+          "sha256": "e46b9ede10b419ac92c45377bd55f07c6dd703ce44bce03a2fdd2a0181a459a6",
+          "bytes": 7159850,
+          "name": "iphone-demo.mp4",
+          "url": "/assets/refresh-20261118/iphone-demo.mp4"
+        },
+        "unchangedBytes": true,
+        "seconds": 19.8,
+        "dimensions": [
+          886,
+          1920
+        ],
+        "fastStartVerified": true,
+        "container": "MP4"
+      },
+      "captions": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/ios-iphone/draft01/captions.vtt",
+          "sha256": "15c1837461969d2331ee013529ecd03945d5365150a90cb8fd9636bc6488228e",
+          "bytes": 417
+        },
+        "output": {
+          "file": "assets/refresh-20261118/iphone-demo.vtt",
+          "sha256": "15c1837461969d2331ee013529ecd03945d5365150a90cb8fd9636bc6488228e",
+          "bytes": 417,
+          "name": "iphone-demo.vtt",
+          "url": "/assets/refresh-20261118/iphone-demo.vtt"
+        },
+        "unchangedBytes": true,
+        "cues": 5,
+        "orderedAndWithinVideo": true
+      },
+      "poster": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/ios-iphone/draft01/poster.png",
+          "sha256": "65adf8650836e13743a0565b8f0eb64a2b532292f19e0658917e34a267b6108e",
+          "bytes": 635649,
+          "dimensions": [
+            886,
+            1920
+          ]
+        },
+        "output": {
+          "file": "assets/refresh-20261118/iphone-poster.webp",
+          "sha256": "7df1917e8cb7a5130df17efe3dd6bb67a76c1af3fbf3d0a0dc00bc9695d72ae4",
+          "bytes": 92710,
+          "name": "iphone-poster.webp",
+          "dimensions": [
+            886,
+            1920
+          ],
+          "format": "webp",
+          "url": "/assets/refresh-20261118/iphone-poster.webp"
+        },
+        "transform": {
+          "operation": "uniform full-frame resize and WebP encoding",
+          "maximumWidth": 960,
+          "crop": false,
+          "retouch": false,
+          "quality": 88,
+          "effort": 4,
+          "colorSpace": "sRGB"
+        }
+      },
+      "approval": {
+        "file": "capacitor-app/store-listing/avatar-first-media/ios-iphone-media-human-review-20261118.json",
+        "sha256": "2f8e01d4fd70921f66985b2fc08475c4aff22d6f71d80c00efb6f031842bb3c7",
+        "bytes": 10811,
+        "quote": "this looks good. let's move to the next step",
+        "scope": "The exact final combined feature-tour preview presented with its original same-reply avatar audio, narration and music. This approval does not establish successful iPhone microphone input."
+      },
+      "posterApproval": {
+        "file": "capacitor-app/store-listing/avatar-first-media/approved-store-media-delivery-20261118.json",
+        "sha256": "2f941cc5817874bbcd2dcb879845cfbd8127f6f7c818faafdfdd8ab6b76a1077",
+        "bytes": 79073
+      }
+    },
+    {
+      "platform": "ipad",
+      "label": "iPad",
+      "sourceDevice": "Physical iPad mini 6; not 13-inch video",
+      "video": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/ios-physical-ipad/draft01/homework-ipad-mini6-preview01.mp4",
+          "sha256": "16ee0d1113dbb8632234f21b37f12f5b553bcf48fd31da6b706d2903c1ccfb7c",
+          "bytes": 7414923
+        },
+        "output": {
+          "file": "assets/refresh-20261118/ipad-demo.mp4",
+          "sha256": "16ee0d1113dbb8632234f21b37f12f5b553bcf48fd31da6b706d2903c1ccfb7c",
+          "bytes": 7414923,
+          "name": "ipad-demo.mp4",
+          "url": "/assets/refresh-20261118/ipad-demo.mp4"
+        },
+        "unchangedBytes": true,
+        "seconds": 22.4,
+        "dimensions": [
+          1200,
+          1600
+        ],
+        "fastStartVerified": true,
+        "container": "MP4"
+      },
+      "captions": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/ios-physical-ipad/draft01/captions.vtt",
+          "sha256": "33ce897ac69a2645a027d19d36b5cd140fc70704d7402baceb9d4ecba440ed2b",
+          "bytes": 424
+        },
+        "output": {
+          "file": "assets/refresh-20261118/ipad-demo.vtt",
+          "sha256": "33ce897ac69a2645a027d19d36b5cd140fc70704d7402baceb9d4ecba440ed2b",
+          "bytes": 424,
+          "name": "ipad-demo.vtt",
+          "url": "/assets/refresh-20261118/ipad-demo.vtt"
+        },
+        "unchangedBytes": true,
+        "cues": 4,
+        "orderedAndWithinVideo": true
+      },
+      "poster": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/ios-physical-ipad/screenshots-draft01/screenshot-01.png",
+          "sha256": "3514363c1a8b9703751625c2e370bc405c211b1fb187a907bbd04c76d12f1563",
+          "bytes": 634852,
+          "dimensions": [
+            1488,
+            2266
+          ]
+        },
+        "output": {
+          "file": "assets/refresh-20261118/ipad-poster.webp",
+          "sha256": "1dc95e5960dfddb63ba1b9c053a8e2eee0962c11484367cc35e2c818b5f5dc09",
+          "bytes": 71888,
+          "name": "ipad-poster.webp",
+          "dimensions": [
+            960,
+            1462
+          ],
+          "format": "webp",
+          "url": "/assets/refresh-20261118/ipad-poster.webp"
+        },
+        "transform": {
+          "operation": "uniform full-frame resize and WebP encoding",
+          "maximumWidth": 960,
+          "crop": false,
+          "retouch": false,
+          "quality": 88,
+          "effort": 4,
+          "colorSpace": "sRGB"
+        }
+      },
+      "approval": {
+        "file": "capacitor-app/store-listing/avatar-first-media/ios-ipad-media-human-review-20261118.json",
+        "sha256": "5a843bb69b952cb95bb989f87aa19bd30a4636ce5acbb14bdd181bea81094e0a",
+        "bytes": 7274,
+        "quote": "Both look and sound good",
+        "scope": "Original avatar voice clarity and synchronization, narration, music and cuts in this exact final preview."
+      },
+      "posterApproval": {
+        "file": "capacitor-app/store-listing/avatar-first-media/ios-physical-homework-gallery-validation-20261118.json",
+        "sha256": "8eea87311e20348bdc635cf4e7deb3b5eb79751aa0aaf1279bb9dd50c53e33e3",
+        "bytes": 12535
+      }
+    },
+    {
+      "platform": "windows",
+      "label": "Windows",
+      "sourceDevice": "Actual native Windows capture",
+      "video": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/windows/homework-avatar-first-draft-01.mp4",
+          "sha256": "462dfaf1828caa4c631206109d14ee7dbd4ad0a22193203ac855d1b9224527e4",
+          "bytes": 5569834
+        },
+        "output": {
+          "file": "assets/refresh-20261118/windows-demo.mp4",
+          "sha256": "462dfaf1828caa4c631206109d14ee7dbd4ad0a22193203ac855d1b9224527e4",
+          "bytes": 5569834,
+          "name": "windows-demo.mp4",
+          "url": "/assets/refresh-20261118/windows-demo.mp4"
+        },
+        "unchangedBytes": true,
+        "seconds": 30.367,
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "fastStartVerified": true,
+        "container": "MP4"
+      },
+      "captions": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/windows/draft01/narration-and-avatar.vtt",
+          "sha256": "a63dd7b8c6ae1167927bc9a6919abceb5acc5e26223490d1d998a4bcfbf7a823",
+          "bytes": 580
+        },
+        "output": {
+          "file": "assets/refresh-20261118/windows-demo.vtt",
+          "sha256": "a63dd7b8c6ae1167927bc9a6919abceb5acc5e26223490d1d998a4bcfbf7a823",
+          "bytes": 580,
+          "name": "windows-demo.vtt",
+          "url": "/assets/refresh-20261118/windows-demo.vtt"
+        },
+        "unchangedBytes": true,
+        "cues": 4,
+        "orderedAndWithinVideo": true
+      },
+      "poster": {
+        "source": {
+          "file": ".artifacts/store-avatar-refresh-20261117/public/homework/windows/delivery-master01/poster.png",
+          "sha256": "04c6df6bd31162de4ae14bb1ddbb61701d076110090c7fece5f3329774f0b0fe",
+          "bytes": 554223,
+          "dimensions": [
+            1920,
+            1080
+          ]
+        },
+        "output": {
+          "file": "assets/refresh-20261118/windows-poster.webp",
+          "sha256": "b03f81a7d37e80451152f6f372126e7c8a7dc45c7464dd9bc37fbfc9bd72c78a",
+          "bytes": 31064,
+          "name": "windows-poster.webp",
+          "dimensions": [
+            1280,
+            720
+          ],
+          "format": "webp",
+          "url": "/assets/refresh-20261118/windows-poster.webp"
+        },
+        "transform": {
+          "operation": "uniform full-frame resize and WebP encoding",
+          "maximumWidth": 1280,
+          "crop": false,
+          "retouch": false,
+          "quality": 88,
+          "effort": 4,
+          "colorSpace": "sRGB"
+        }
+      },
+      "approval": {
+        "file": "capacitor-app/store-listing/avatar-first-media/windows-homework-human-review-20261118.json",
+        "sha256": "0c66813c22b696e20a4dfa0ba80cb0e44d2a308cc1c73b6bcc279a997c124da8",
+        "bytes": 4870,
+        "quote": "Looks and sounds good",
+        "scope": [
+          "Both selected avatar excerpts and synchronization",
+          "Editorial narration",
+          "Background music",
+          "Pacing and cuts"
+        ]
+      },
+      "posterApproval": {
+        "file": "capacitor-app/store-listing/avatar-first-media/windows-homework-human-review-20261118.json",
+        "sha256": "0c66813c22b696e20a4dfa0ba80cb0e44d2a308cc1c73b6bcc279a997c124da8",
+        "bytes": 4870
+      }
+    }
+  ],
+  "gallery": [
+    {
+      "role": "avatar",
+      "caption": "See and hear the explanation",
+      "alt": "Homework Helper shows an avatar explaining a colorful shapes worksheet.",
+      "platform": "Android",
+      "approvedSlot": 1,
+      "source": {
+        "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/screenshots-v2/screenshot-01.png",
+        "sha256": "d81445c863b563be7ae6ac0b7333ee2b823a0d67a89e6c53345005fa3eed894d",
+        "bytes": 631022,
+        "dimensions": [
+          1080,
+          2400
+        ]
+      },
+      "output": {
+        "file": "assets/refresh-20261118/avatar.webp",
+        "sha256": "b390d3a97dbff1825e2ebff78a3b4a5e1ac60381c6977a9ba6a0c9b25bd15481",
+        "bytes": 111930,
+        "name": "avatar.webp",
+        "dimensions": [
+          960,
+          2133
+        ],
+        "format": "webp",
+        "url": "/assets/refresh-20261118/avatar.webp"
+      },
+      "transform": {
+        "operation": "uniform full-frame resize and WebP encoding",
+        "maximumWidth": 960,
+        "crop": false,
+        "retouch": false,
+        "quality": 88,
+        "effort": 4,
+        "colorSpace": "sRGB"
+      }
+    },
+    {
+      "role": "speak",
+      "caption": "Ask out loud",
+      "alt": "Homework Helper shows a spoken question with its saved response.",
+      "platform": "Android",
+      "approvedSlot": 2,
+      "source": {
+        "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/screenshots-v2/screenshot-02.png",
+        "sha256": "bfefa1bf1f63e6fa18b5d1fd399397008f64a928af03170989febd3f81622d9f",
+        "bytes": 285198,
+        "dimensions": [
+          1080,
+          2400
+        ]
+      },
+      "output": {
+        "file": "assets/refresh-20261118/speak.webp",
+        "sha256": "cb7bd6808252666c085a10cb116acade96e52c93e3ebe8421d7b35527b5f0bf2",
+        "bytes": 91736,
+        "name": "speak.webp",
+        "dimensions": [
+          960,
+          2133
+        ],
+        "format": "webp",
+        "url": "/assets/refresh-20261118/speak.webp"
+      },
+      "transform": {
+        "operation": "uniform full-frame resize and WebP encoding",
+        "maximumWidth": 960,
+        "crop": false,
+        "retouch": false,
+        "quality": 88,
+        "effort": 4,
+        "colorSpace": "sRGB"
+      }
+    },
+    {
+      "role": "screenshot",
+      "caption": "Bring homework from another screen",
+      "alt": "Homework Helper displays an attached colorful shapes worksheet screenshot.",
+      "platform": "Android",
+      "approvedSlot": 3,
+      "source": {
+        "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/screenshots-v2/screenshot-03.png",
+        "sha256": "2c506d86cf5ac181a28ce20c3be0d6d832a14e60227132f793a034e127bc5585",
+        "bytes": 710144,
+        "dimensions": [
+          1080,
+          2400
+        ]
+      },
+      "output": {
+        "file": "assets/refresh-20261118/screenshot.webp",
+        "sha256": "72c95d7d14410db674550d15ebf6dcf92688f613767fc9e006b5aeadfc7ef60d",
+        "bytes": 89026,
+        "name": "screenshot.webp",
+        "dimensions": [
+          960,
+          2133
+        ],
+        "format": "webp",
+        "url": "/assets/refresh-20261118/screenshot.webp"
+      },
+      "transform": {
+        "operation": "uniform full-frame resize and WebP encoding",
+        "maximumWidth": 960,
+        "crop": false,
+        "retouch": false,
+        "quality": 88,
+        "effort": 4,
+        "colorSpace": "sRGB"
+      }
+    },
+    {
+      "role": "zoom",
+      "caption": "Look closer",
+      "alt": "Homework Helper shows an enlarged worksheet diagram.",
+      "platform": "Android",
+      "approvedSlot": 5,
+      "source": {
+        "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/screenshots-v2/screenshot-05.png",
+        "sha256": "dc48fdc80313d2c46ae74da1e553ab8185d99c403839058afce06d40e0eadb2a",
+        "bytes": 866921,
+        "dimensions": [
+          1080,
+          2400
+        ]
+      },
+      "output": {
+        "file": "assets/refresh-20261118/zoom.webp",
+        "sha256": "fde31c9dfe02c7b8c1b290a3d218624c973ea28b7747fa5e5a14a694b816cced",
+        "bytes": 88740,
+        "name": "zoom.webp",
+        "dimensions": [
+          960,
+          2133
+        ],
+        "format": "webp",
+        "url": "/assets/refresh-20261118/zoom.webp"
+      },
+      "transform": {
+        "operation": "uniform full-frame resize and WebP encoding",
+        "maximumWidth": 960,
+        "crop": false,
+        "retouch": false,
+        "quality": 88,
+        "effort": 4,
+        "colorSpace": "sRGB"
+      }
+    },
+    {
+      "role": "explanation",
+      "caption": "Learn with clear explanations",
+      "alt": "Homework Helper keeps the worksheet and text explanation together.",
+      "platform": "Android",
+      "approvedSlot": 7,
+      "source": {
+        "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/screenshots-v2/screenshot-07.png",
+        "sha256": "1cd15618b63ecd3dd42dab449e75b2476a5335ec8babad38154d7b8ebb003001",
+        "bytes": 293582,
+        "dimensions": [
+          1080,
+          2400
+        ]
+      },
+      "output": {
+        "file": "assets/refresh-20261118/explanation.webp",
+        "sha256": "b6cd65c65a392717f3133521cfea2bc1174257c2334e14a2f9fddb344854cd9a",
+        "bytes": 95886,
+        "name": "explanation.webp",
+        "dimensions": [
+          960,
+          2133
+        ],
+        "format": "webp",
+        "url": "/assets/refresh-20261118/explanation.webp"
+      },
+      "transform": {
+        "operation": "uniform full-frame resize and WebP encoding",
+        "maximumWidth": 960,
+        "crop": false,
+        "retouch": false,
+        "quality": 88,
+        "effort": 4,
+        "colorSpace": "sRGB"
+      }
+    },
+    {
+      "role": "history",
+      "caption": "Pick up where you left off",
+      "alt": "Homework Helper shows a saved homework conversation.",
+      "platform": "Android",
+      "approvedSlot": 8,
+      "source": {
+        "file": ".artifacts/store-avatar-refresh-20261117/public/homework/android/screenshots-v2/screenshot-08.png",
+        "sha256": "a4f2ec710f6549a6eabdf2d115a8ac2639d6a4f8fda7f999063caa8c761d7aab",
+        "bytes": 92388,
+        "dimensions": [
+          1080,
+          2400
+        ]
+      },
+      "output": {
+        "file": "assets/refresh-20261118/history.webp",
+        "sha256": "be5cfc59b9b63c6efc97971886f9dfa9df1b007e76d39fa10bce4bd41c795747",
+        "bytes": 38868,
+        "name": "history.webp",
+        "dimensions": [
+          960,
+          2133
+        ],
+        "format": "webp",
+        "url": "/assets/refresh-20261118/history.webp"
+      },
+      "transform": {
+        "operation": "uniform full-frame resize and WebP encoding",
+        "maximumWidth": 960,
+        "crop": false,
+        "retouch": false,
+        "quality": 88,
+        "effort": 4,
+        "colorSpace": "sRGB"
+      }
+    }
+  ],
+  "galleryApproval": {
+    "file": "capacitor-app/store-listing/avatar-first-media/android-windows-gallery-human-review-20261118.json",
+    "sha256": "54a505ca3005d48bb6e9d8184e36f9f916df60844be5fce47a7c174bd8456e00",
+    "bytes": 12199,
+    "quote": "All three galleries look good"
+  },
+  "deliveryEvidence": {
+    "file": "capacitor-app/store-listing/avatar-first-media/approved-store-media-delivery-20261118.json",
+    "sha256": "2f941cc5817874bbcd2dcb879845cfbd8127f6f7c818faafdfdd8ab6b76a1077",
+    "bytes": 79073
+  },
+  "publicCredits": {
+    "music": {
+      "credit": "Music: 'Simplicity' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au",
+      "sourceUrl": "https://www.scottbuckley.com.au/library/simplicity/",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Music excerpted, level-adjusted, ducked under speech and faded."
+    },
+    "questionAndDiagrams": {
+      "credit": "What Kind and How Many?, IM Grade 6 Unit 2 Lesson 1. Authored by Illustrative Mathematics; originally developed by Open Up Resources.",
+      "sourceUrl": "https://im.kendallhunt.com/MS/students/1/2/1/index.html#activity-1.1",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Original question and diagram unchanged; worksheet layout reformatted by Faviclone."
+    },
+    "explanationNote": "AI explanations are generated by the app, not official publisher solutions."
+  },
+  "publicCreditPlacement": "Display linked music and question/diagram credits near demos and screenshot gallery; this local manifest alone does not provide public attribution.",
+  "playbackRecommendation": {
+    "controls": true,
+    "playsInline": true,
+    "preload": "none",
+    "autoplay": false,
+    "initialMp4Requests": 0,
+    "loadOnlyAfterUserPlay": true,
+    "captions": "English WebVTT, user-selectable",
+    "posterObjectFit": "contain"
+  },
+  "heroRecommendation": {
+    "avatar": "avatar.webp",
+    "voice": "speak.webp",
+    "screenshot": "screenshot.webp"
+  },
+  "videoBytes": 28730483,
+  "generator": {
+    "file": ".artifacts/homework-site-refresh-20261118/prepare-media.cjs",
+    "sha256": "af6689c3976da966a62ba714b3ea198e54da2cda4a1d9e9e47d803063099efd4",
+    "bytes": 11707
+  },
+  "sharpVersion": "0.34.3",
+  "validation": {
+    "approvedVideoHashesMatched": true,
+    "allFourMp4AndCaptionCopiesByteIdentical": true,
+    "captionTimingsChecked": true,
+    "allImagesDecoded": true,
+    "fullFramingPreserved": true,
+    "visualReviewPending": false,
+    "allTenWebpImagesVisuallyInspected": true,
+    "visualResult": "All six screenshots and all four posters preserve full source framing, with readable headline text and unchanged native UI. The zoom screenshot retains its original demonstrated app zoom.",
+    "contactSheet": ".artifacts/homework-site-refresh-20261118/media-contact-sheet.png"
+  },
+  "scope": "Approved media used by the Homework Helper homepage and YouMacro referral page. No video/audio timeline edits, new app builds or Store changes.",
+  "sourceRepository": "nodegraph/live_agent",
+  "outputRepository": "nodegraph/homework_helper_web"
+}

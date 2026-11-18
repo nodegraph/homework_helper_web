@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/config.php';
-$pageTitle = 'Upcoming app update';
-$pageDescription = 'Device requirements, saved work and transition information for the upcoming Homework Helper and Classroom Helper updates.';
+$pageTitle = 'App update and device requirements';
+$pageDescription = 'Device requirements, saved work and rollout information for Homework Helper and Cloud Classroom.';
 $canonicalUrl = 'https://homeworkhelper.dev/app-update.php';
 ?>
 <!DOCTYPE html>
@@ -12,12 +12,12 @@ $canonicalUrl = 'https://homeworkhelper.dev/app-update.php';
 <body class="site-page">
     <?php include __DIR__ . '/_components/header.php'; ?>
     <main id="main" class="page-wrap section-wrap">
-        <p class="page-kicker">Homework Helper &amp; Classroom Helper</p>
-        <h1 class="page-title">A new chat experience is coming.</h1>
+        <p class="page-kicker">Homework Helper &amp; Cloud Classroom</p>
+        <h1 class="page-title">A new way to work through your questions.</h1>
         <p class="page-lede">Please check your device and keep your saved work before updating.</p>
         <div class="update-status" aria-label="Transition status">
-            <p><strong>Status: live calls paused.</strong> New live avatar calls to Homework Helper are temporarily paused while we validate the new chat experience. The updated apps are still in private testing.</p>
-            <p>Live-call pause verified: November 13, 2026 at 8:58 p.m. Pacific time. A completion time is not yet confirmed.</p>
+            <p><strong>Try the current experience in your browser.</strong> Ask in a text conversation, use Speak or share a question image, and tap an answer to request its avatar video with audio. <a href="<?= htmlspecialchars($common['tryNowUrl'], ENT_QUOTES, 'UTF-8') ?>">Open Homework Helper</a>.</p>
+            <p>As of November 18, 2026, the latest app updates have been submitted to the Android, Apple and Microsoft stores. Review and availability can differ by platform. The former continuous live-call workflow remains paused.</p>
         </div>
         <section class="update-section" aria-labelledby="requirements">
             <h2 id="requirements">Check your device</h2>
@@ -28,15 +28,15 @@ $canonicalUrl = 'https://homeworkhelper.dev/app-update.php';
             </ul>
             <p>Devices below these versions cannot install the new apps. Access through an older browser has not been verified and is not a supported replacement.</p>
         </section>
-        <section class="update-section" aria-labelledby="audience">
-            <h2 id="audience">Classroom is changing to ages 13+</h2>
-            <p>The updated Classroom Helper is for people aged 13 and older. It asks for an age-range confirmation on the device before lessons can start. Users under 13 cannot use the updated lessons; privacy, support, account-deletion and prior-data export options remain available. Homework Helper continues to be for ages 13 and older.</p>
-            <p>Classroom Helper uses its existing store listings. On the Apple App Store, its name remains <strong>Cloud Classroom</strong>.</p>
+        <section class="update-section" aria-labelledby="apps">
+            <h2 id="apps">Choose the app for what you want to learn</h2>
+            <p>Homework Helper starts with your own question. <a href="https://www.faviclone.com/ai-teachers">Cloud Classroom</a> offers guided math, language and science lessons in a separate app. Both use the same chat style, speech input and optional avatar replies.</p>
+            <p>Cloud Classroom continues to use its existing store listings. The Windows Store listing keeps its registered name, <strong>Cloud_Classroom</strong>.</p>
         </section>
         <section class="update-section" aria-labelledby="availability">
-            <h2 id="availability">Expect an interruption during the transition</h2>
-            <p>The old live conversation service may be unavailable while we move to the new experience and the stores review the updates. Older installed apps may show a connection error instead of a maintenance or upgrade message.</p>
-            <p>A completion date is not confirmed because store review times vary. Updates may become available on different platforms at different times. We will update this page as backend testing and store reviews progress.</p>
+            <h2 id="availability">If your older app cannot connect</h2>
+            <p>The former continuous live-call service is paused. Older installed apps that use that workflow may show a connection error instead of an upgrade message. You can try the current browser app while waiting for your store update.</p>
+            <p>A release date is not guaranteed because store review times vary. Updates may become available on different platforms at different times. The older-browser compatibility limitation above still applies.</p>
         </section>
         <section class="update-section" aria-labelledby="saved-work">
             <h2 id="saved-work">Keep your app and saved work</h2>

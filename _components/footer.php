@@ -4,6 +4,7 @@
         <p>A little help. A lot to discover.</p>
         <nav aria-label="Footer"><a href="/faq.php">FAQs</a><a href="/app-update.php">App update</a><a href="/contact.php">Contact</a><a href="https://www.faviclone.com/homework-helper/privacy">Privacy</a><a href="https://www.faviclone.com/homework-helper/delete-data">Delete data</a></nav>
     </div>
-    <div class="section-wrap footer-bottom"><span>&copy; <?= date('Y') ?> NodeGraphSoftware</span><span>For curious minds, ages 13 and up.</span></div>
+    <div class="section-wrap footer-bottom"><span>&copy; <?= date('Y') ?> NodeGraphSoftware</span><span>AI explanations. Human curiosity.</span></div>
 </footer>
-<script src="/assets/site.js" defer></script>
+<dialog class="screenshot-dialog" aria-labelledby="screenshot-title"><div class="screenshot-toolbar"><h2 id="screenshot-title">App screenshot</h2><button type="button" data-close-screenshot aria-label="Close screenshot"><?= siteIcon('close') ?></button></div><div class="screenshot-body"><img alt="" width="960" height="2133"></div><a class="screenshot-original" target="_blank" rel="noopener noreferrer">Open full-size image</a></dialog>
+<script src="/assets/site.js?v=20261118" defer></script>

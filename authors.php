@@ -1,77 +1,24 @@
 <?php
-// Include config for global variables
-require_once 'config.php';
-
-// Authors Data 
-$authorsPage = [
-    "title" => "Made by Creators of YouMacro",
-    "description" => "An AI tutor to help you finish homework, while you download videos.",
-];
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/_components/product-media.php';
+$pageTitle = 'From the makers of YouMacro';
+$pageDescription = 'Use YouMacro Video Downloader? Meet Homework Helper. Share a screenshot of a question, ask aloud, and see and hear an AI avatar explain the answer.';
+$isReferralPage = true;
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <?php 
-    $pageTitle = "Authors";
-    $pageDescription = $authorsPage['description'];
-    include '_components/meta.php'; 
-    ?>
-</head>
-<body class="site-page legacy-page min-h-screen font-body">
-    <!-- Header -->
-    <?php include '_components/header.php'; ?>
-    
-    <!-- Main Section -->
-    <section id="main" class="pt-24 pb-16">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Page Header -->
-            <div class="text-center mb-16">
-                <h1 class="flex items-center justify-center gap-3 text-4xl font-bold text-gray-900 mb-4 font-heading">
-                    <?php echo $authorsPage['title']; ?>
-                    <img src="./assets/cassette.png" alt="Cassette" class="h-10 w-auto object-contain">
-                </h1>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto font-body mb-8"><?php echo $authorsPage['description']; ?></p>
-                
-                <a href=".." class="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                    <span class="material-icons mr-2">home</span>
-                    See Main Page
-                </a>
-            </div>
-
-            <div class="max-w-3xl mx-auto mt-8 mb-12 bg-blue-100 backdrop-blur-sm rounded-2xl border border-blue-200 p-8 shadow-sm">
-                <ul class="space-y-4 text-lg text-gray-600 font-body">
-                    <li class="flex items-start">
-                        <span class="material-icons text-blue-600 mr-3 mt-1">check_circle</span>
-                        <span>You can install the app or run it inside the YouMacro web browser.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="material-icons text-blue-600 mr-3 mt-1">check_circle</span>
-                        <span>Homework Helper is your friendly AI tutor.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="material-icons text-blue-600 mr-3 mt-1">check_circle</span>
-                        <span>Take a photo, take a screenshot, use your voice, type or handwrite to get real-time solutions and help writing essays.</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- Authors Grid -->
-            <div class="grid grid-cols-1 gap-6 max-w-3xl mx-auto">
-                <div class="group relative bg-gradient-to-br from-white to-gray-50/50 rounded-3xl border border-gray-200/60 overflow-hidden hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-1">
-                    <img src="./assets/youmacro_homework_helper_main.png" 
-                         alt="YouMacro Homework Helper Main" 
-                         class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="group relative bg-gradient-to-br from-white to-gray-50/50 rounded-3xl border border-gray-200/60 overflow-hidden hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-1">
-                    <img src="./assets/youmacro_homework_helper_chat.png" 
-                         alt="YouMacro Homework Helper Chat" 
-                         class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-            </div>
-        </div>
+<!DOCTYPE html><html lang="en"><head><?php include __DIR__ . '/_components/meta.php'; ?></head>
+<body class="site-page site-refresh referral-page"><?php include __DIR__ . '/_components/header.php'; ?>
+<main id="main">
+    <section class="study-hero referral-hero section-wrap" aria-labelledby="referral-heading">
+        <div class="study-hero-copy"><p class="eyebrow">FROM THE MAKERS OF YOUMACRO VIDEO DOWNLOADER</p><h1 id="referral-heading">Saved the lesson?<br><em>Make sense<br> of the question.</em></h1><p>Meet Homework Helper, our AI study companion. Bring over a screenshot, ask about a confusing step, and tap a reply to see and hear the explanation.</p><div class="hero-actions"><a class="button button-primary" href="<?= mediaEscape($common['tryNowUrl']) ?>">Try Homework Helper</a><a class="button button-secondary" href="#get-started">Get the app</a></div><p class="availability">Try in your browser · Also on Windows and mobile</p></div>
+        <div class="hero-demo"><p class="demo-kicker"><?= siteIcon('play') ?> See what your next question could look like</p><?php homeworkVideo('windows', 'youmacro-demo'); ?><p class="quiet-copy">30 seconds inside the Windows app. Hear the avatar’s original voice and see speech input and screenshot capture.</p></div>
     </section>
-    
-    <!-- Footer -->
-    <?php include '_components/footer.php'; ?>
-</body>
-</html>
+    <section class="section-wrap referral-workflow" aria-labelledby="workflow-heading">
+        <div class="section-heading"><div><p class="eyebrow">FROM WATCHING TO UNDERSTANDING</p><h2 id="workflow-heading">Bring the part<br>you want to understand.</h2></div><p>A paused lesson, a practice question, a diagram. You decide what to share and what to ask.</p></div>
+        <div class="workflow-grid"><article><span class="feature-symbol"><?= siteIcon('capture') ?></span><h3>Capture the question.</h3><p>Pause your lesson at the tricky part. In Homework Helper, choose Screenshot to select a window or display, or attach a screenshot you’ve already taken.</p></article><article><span class="feature-symbol"><?= siteIcon('mic') ?></span><h3>Ask what isn’t clicking.</h3><p>Type your question or tap Speak. For example: “Why does this step work?” Add the image so the explanation has context.</p></article><article><span class="feature-symbol"><?= siteIcon('play') ?></span><h3>See it another way.</h3><p>Read the reply, then tap it for an avatar explanation with audio. Ask a follow-up in the same conversation.</p></article></div>
+        <p class="platform-note">Capture options depend on your device. Browsers can share a tab, window or display; Windows offers a window or display picker. Android uses its screen-sharing picker. On iPhone and iPad, import a normal screenshot.</p>
+    </section>
+    <section class="learning-band"><div class="section-wrap referral-proof"><div class="referral-proof-copy"><p class="eyebrow">A DIFFERENT WAY TO WORK THROUGH IT</p><h2>More than<br>a wall of text.</h2><p>See the AI avatar speak. Explain your thinking out loud. Zoom into the detail you missed. It all stays in one conversation, ready for your next question.</p><a class="button button-primary" href="<?= mediaEscape($common['tryNowUrl']) ?>">Ask your first question</a></div><div class="conversation-shots"><?php homeworkShot('avatar', 'An explanation you can see and hear', 'The Homework Helper avatar explaining how to sort colorful shapes'); ?><?php homeworkShot('screenshot', 'Bring a screenshot into the conversation', 'A public colorful shapes worksheet enlarged in Homework Helper'); ?></div></div></section>
+    <section class="section-wrap referral-questions" aria-labelledby="referral-questions-heading"><div><p class="eyebrow">BEFORE YOU TRY IT</p><h2 id="referral-questions-heading">A few quick answers.</h2></div><div class="faq-list"><details class="faq-item"><summary>Is Homework Helper part of YouMacro?</summary><p>It’s a separate app from the same makers. Open it in your browser or install it on your device, then add the question you want to discuss.</p></details><details class="faq-item"><summary>Can I ask without taking a screenshot?</summary><p>Yes. Type, tap Speak, photograph a question, add an existing image, or draw your idea. A screenshot is useful when the question is already on another screen.</p></details><details class="faq-item"><summary>Do I need to play every answer as a video?</summary><p>No. Replies arrive in the text conversation. Tap an answer whenever you want to request its avatar video with spoken audio.</p></details></div></section>
+    <section id="get-started" class="section-wrap referral-cta" aria-labelledby="get-started-heading"><p class="eyebrow">YOUR NEXT QUESTION IS A GOOD PLACE TO START</p><h2 id="get-started-heading">Keep your curiosity going.</h2><p>Try Homework Helper now, or install the Windows app beside YouMacro.</p><div class="hero-actions"><a class="button button-primary" href="<?= mediaEscape($common['tryNowUrl']) ?>">Open Homework Helper</a><a class="button button-secondary" href="<?= mediaEscape($common['microsoftStoreUrl']) ?>">Get it for Windows</a><a class="text-link" href="/#download">Find the mobile apps</a></div><p class="quiet-copy">Internet required. AI can make mistakes; check important answers. Store updates may arrive at different times.</p></section>
+    <div class="section-wrap referral-credits"><?php homeworkMediaCredits(); ?></div>
+</main><?php include __DIR__ . '/_components/footer.php'; ?></body></html>

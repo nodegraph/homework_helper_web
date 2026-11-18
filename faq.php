@@ -18,31 +18,31 @@ $canonicalUrl = 'https://homeworkhelper.dev/faq.php';
         <div class="faq-list">
             <details class="faq-item">
                 <summary>Who is Homework Helper for?</summary>
-                <p>Teens aged 13 and older and adults. Review a topic, work through a problem, or ask a follow-up question at your own pace.</p>
+                <p>Anyone working through a question or reviewing something they want to understand. Bring a homework problem, explore a diagram, or ask a follow-up at your own pace.</p>
             </details>
             <details class="faq-item">
-                <summary>Which helper should I choose?</summary>
-                <p>Start with Homework Helper for a question of your own. Choose Math Teacher, Language Teacher, or Science Teacher to explore available courses and guided activities.</p>
+                <summary>How do the avatar replies work?</summary>
+                <p>Answers appear in the text chat. Tap a completed reply to request its avatar video with spoken audio. You choose which answers to watch; you can also continue the conversation in text.</p>
             </details>
             <details class="faq-item">
                 <summary>Can I show a question instead of typing it?</summary>
-                <p>Yes. Share an image, take a photo, or use the drawing tools to show what you're working on. You can also speak or type during a call.</p>
+                <p>Yes. Take a photo, add an image, draw, or use Screenshot. Browsers can capture a tab, window or display; Windows offers a window or display picker; Android uses its screen-sharing picker. On iPhone and iPad, take a normal screenshot and import it. Tap an attached image to take a closer look.</p>
             </details>
             <details class="faq-item">
                 <summary>Does it work on my device?</summary>
-                <p>Homework Helper has apps for Android, iPhone, iPad, and Windows. Check your device's store listing for compatibility. Store updates may arrive at different times.</p>
+                <p>Try it in a browser, or get the Android, iPhone, iPad or Windows app. Check your device’s store listing for compatibility. The demos show the latest submitted update; store availability may vary while reviews finish.</p>
             </details>
             <details class="faq-item">
                 <summary>Do I need an internet connection?</summary>
-                <p>Yes. Calls use our online AI service and microphone access. You may see a queue when available helpers are busy. Camera access is only needed when you take a photo.</p>
+                <p>Yes. Questions, speech transcription and requested avatar videos use our online services. Allow microphone access when you use Speak and camera access when you take a photo. Responses and videos may take longer when the service is busy.</p>
             </details>
             <details class="faq-item">
                 <summary>Are the answers always right?</summary>
-                <p>AI can make mistakes. Use the explanations to explore ideas, and check important answers against your course materials or with a teacher. You can report a response directly from the chat.</p>
+                <p>AI can make mistakes. Use the explanations to explore ideas, and check important answers against your course materials or with a teacher. <a href="/contact.php">Contact support</a> if an answer needs review.</p>
             </details>
             <details class="faq-item">
                 <summary>How do I manage my data?</summary>
-                <p>Open Settings &rarr; Privacy in the app for privacy information and account-deletion controls. See our <a href="https://www.faviclone.com/homework-helper/privacy">privacy policy</a> or <a href="https://www.faviclone.com/homework-helper/delete-data">data-deletion guidance</a> for more.</p>
+                <p>See our <a href="https://www.faviclone.com/homework-helper/privacy">privacy policy</a> for how questions, images and responses are handled, and <a href="https://www.faviclone.com/homework-helper/delete-data">data-deletion guidance</a> to manage your data.</p>
             </details>
         </div>
         <div class="faq-contact">

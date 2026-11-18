@@ -1,9 +1,9 @@
 # Homework Helper website
 
-The PHP marketing website at **homeworkhelper.dev**, using real app recordings,
-screenshots and existing promotional artwork. The November 2026 redesign keeps
-the existing Google Play, Apple App Store, Microsoft Store and Chrome Web Store
-destinations, including while those stores serve the previous app versions.
+The PHP marketing site at **homeworkhelper.dev**. The homepage and `/authors.php`
+use the latest approved Store media, showing the avatar first, speech input second
+and screenshot capture third. The referral page addresses visitors from YouMacro
+Video Downloader and links directly to the browser app and existing Store pages.
 
 ## Local development
 
@@ -13,62 +13,50 @@ npm run build
 php -S 127.0.0.1:8092 -t .
 ```
 
-Open `http://127.0.0.1:8092`. On Windows use `npm.cmd` if PowerShell blocks npm.
-The preview requires PHP; serving the directory as plain static files will not
-render templates. `npm run build-css` watches the legacy Tailwind stylesheet.
+On Windows, use `npm.cmd`; PHP is installed at `I:\installs\php-8.5.2\php.exe` on
+the development machine. Preview with PHP, not a plain static file server.
 
 ## Editing
 
-- `index.php`: homepage, platform demo data and download section.
-- `assets/site.css`: responsive design, shared navigation and supporting pages.
-- `assets/site.js`: accessible demo tabs, on-demand video playback and mobile nav.
-- `_components/`: shared metadata, header, footer and small inline SVG icons.
-- `contact.php`, `faq.php`: current support and product information.
-- `config.php`: existing store URLs and settings used by legacy routes.
-- `assets/showcase/`: compressed derivatives of the latest promotional media.
-- `docs/media-provenance.json`: source references, hashes and transformations.
+- `index.php`: avatar-first homepage, feature gallery and four platform demos.
+- `authors.php`: YouMacro referral landing page; preserve this inbound URL.
+- `_components/product-media.php`: shared media data, video/gallery markup and
+  linked attribution.
+- `assets/product-showcase.css`: responsive layouts and image viewer.
+- `assets/site.css`, `assets/site.js`: shared branding, themes, navigation and
+  accessible playback, tabs and screenshot enlargement.
+- `_components/`: shared metadata, header, footer and inline SVG icons.
+- `faq.php`, `contact.php`: product information and support.
+- `config.php`: existing Store destinations and legacy route settings.
+- `assets/refresh-20261118/`: versioned approved videos, captions and WebP images.
+- `docs/media-refresh-20261118.json`: source/output hashes, human approvals,
+  credits and derivation details. Source references are relative to `live_agent`.
 
-The video selector supports arrow keys, Home and End. Each video retains its
-actual app footage, original tutor audio and distinct action narrator, with
-English WebVTT captions. No MP4 loads until playback is requested. Selecting
-another device or hiding the page pauses playback. The videos have native
-controls and a direct-file fallback; all four are linked without JavaScript.
+The four video/caption pairs retain their approved bytes, including the avatar’s
+original audio, narration and music. Total media is about 29.6 MB, but no MP4 is
+requested before Play. Selecting another demo or hiding the page pauses playback.
+Native controls and direct-file links remain available; JavaScript is not needed
+to open an image or video directly. Video tabs support arrows, Home and End.
+Image enlargement supports Escape, focus restoration and a full-size image link.
 
-Images are proportionally resized WebP exports. Videos are H.264/AAC MP4s with
-faststart, proportional scaling and no edits to the source timeline. Sources
-remain in the live_agent store-listing directories and the operator's Homework
-Helper video handoff. The entire new media set is approximately 11 MB; media is
-served locally, without loading a YouTube player or advertising SDK.
+The Android, Windows and iPad recordings use real devices. The iPhone preview is
+the approved simulator feature tour, and is not presented as a successful spoken
+transcription demonstration. Posters and screenshots retain complete framing.
 
-## Release notes
+The pages describe the current question-and-reply workflow, with optional avatar
+video requested by tapping a reply. Cloud Classroom is a separate app. Store
+review timing can differ by platform, so the pages do not promise that every
+submitted feature is already available in every public binary.
 
-The new app updates were still under store review when these pages were
-prepared. The demo section states this explicitly. Update that short note only
-after confirming the corresponding releases are publicly available. Existing
-store links stay usable throughout review. The Chrome extension link is kept
-separate from the four redesigned app demos.
+## Hosting and legacy routes
 
-The footer links to the current Homework Helper privacy policy. Legacy PHP
-policy and reward routes are preserved for existing callers. No review claims,
-ratings, guaranteed grades or unverified testimonials are added to the new site.
+Keep the existing Vercel PHP deployment and domain. `vercel.json` serves root PHP
+routes, `assets/**`, `dist/**` and `app-ads.txt`. Confirm the existing project’s
+Git integration before publishing. No hosting migration or new account is needed.
+Rebuild and commit `dist/output.css` if Tailwind utility classes change; the two
+plain CSS files are served directly. This media update uses plain CSS classes.
 
-Vercel currently deploys PHP plus `assets/**` and `dist/**`. Rebuild and commit
-`dist/output.css` when changing Tailwind template classes. `assets/site.css` and
-`assets/site.js` are served directly. Local commits do not publish the site;
-deployment is a separate step.
-
-## Verification (November 1, 2026)
-
-- Production CSS build, all changed PHP syntax checks and JavaScript syntax pass.
-- Homepage, FAQ, contact and preserved legacy routes return HTTP 200.
-- All four original store URLs match the preceding revision exactly.
-- Download redirects checked for Android, iPhone, iPad desktop user agent,
-  Windows, Linux and an absent user agent.
-- Chrome layout checks at 320, 390, 768, 1024 and 1440 pixels show no horizontal
-  overflow. Desktop and mobile layouts were visually reviewed.
-- All four videos start playback, report no media error and load English caption
-  cues (Android 23, iPhone 7, iPad 7, Windows 19). Full FFmpeg decode checks pass.
-- MP4 requests are absent on initial page load. Arrow/Home/End navigation selects
-  the matching demo and moves focus; mobile navigation closes after selection.
-- Browser console contains no errors or warnings. Shared skip links have content
-  targets, and the FAQ uses native accessible disclosure controls.
+Store URL values, download routing, privacy routes, contact details and the
+separate reward route stay in place. No new tracking SDK, incentive, rating or
+testimonial is introduced. The referral page does not claim that Homework Helper
+automatically imports videos or runs inside YouMacro.

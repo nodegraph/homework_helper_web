@@ -58,7 +58,12 @@
     });
   });
   const tabs = [...document.querySelectorAll("[data-platform]")];
-  const videos = [...document.querySelectorAll(".demo-player video")];
+  const videos = [...document.querySelectorAll(".demo-player video, .film video")];
+  videos.forEach((video) => {
+    video.addEventListener("play", () => {
+      videos.forEach((other) => { if (other !== video) other.pause(); });
+    });
+  });
   function selectTab(tab, moveFocus = false) {
     videos.forEach((video) => video.pause());
     tabs.forEach((item) => {
@@ -85,9 +90,9 @@
       }
     });
   });
-  document.querySelectorAll(".video-start").forEach((button) => {
+  document.querySelectorAll(".video-start, [data-video-start]").forEach((button) => {
     const video = button.parentElement.querySelector("video");
-    const error = button.closest(".demo-panel").querySelector(".video-error");
+    const error = button.closest(".demo-panel, .film").querySelector(".video-error");
     button.addEventListener("click", async () => {
       videos.forEach((other) => {
         if (other !== video) other.pause();
@@ -114,4 +119,33 @@
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) videos.forEach((video) => video.pause());
   });
+  const screenshotDialog = document.querySelector(".screenshot-dialog");
+  if (screenshotDialog && typeof screenshotDialog.showModal === "function") {
+    let screenshotTrigger = null;
+    document.querySelectorAll("[data-screenshot]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        screenshotTrigger = link;
+        videos.forEach((video) => video.pause());
+        const image = screenshotDialog.querySelector("img");
+        image.src = link.href;
+        image.alt = link.querySelector("img").alt;
+        screenshotDialog.querySelector("h2").textContent = link.dataset.title;
+        screenshotDialog.querySelector(".screenshot-original").href = link.href;
+        screenshotDialog.showModal();
+        document.body.classList.add("screenshot-open");
+        screenshotDialog.querySelector("[data-close-screenshot]").focus();
+      });
+    });
+    screenshotDialog.querySelector("[data-close-screenshot]").addEventListener("click", () => screenshotDialog.close());
+    screenshotDialog.addEventListener("click", (event) => {
+      if (event.target !== screenshotDialog) return;
+      const bounds = screenshotDialog.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) screenshotDialog.close();
+    });
+    screenshotDialog.addEventListener("close", () => {
+      document.body.classList.remove("screenshot-open");
+      screenshotTrigger?.focus({ preventScroll: true });
+    });
+  }
 })();

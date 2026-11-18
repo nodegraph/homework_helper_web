@@ -20,7 +20,7 @@ require_once __DIR__ . '/site-icons.php';
                 <span class="theme-icon-dark"><?= siteIcon('moon') ?></span>
                 <span class="theme-toggle-label">Light</span>
             </button>
-            <a class="button button-primary button-small" href="/#download">Get the app <?= siteIcon('arrow') ?></a>
+            <a class="button button-primary button-small" href="<?= htmlspecialchars($common['tryNowUrl'], ENT_QUOTES, 'UTF-8') ?>">Try in browser</a>
             <details class="mobile-nav">
                 <summary aria-label="Navigation menu"><span></span><span></span></summary>
                 <nav aria-label="Mobile navigation"><a href="/#how-it-works">How it works</a><a href="/#in-action">See it in action</a><a href="/faq.php">FAQs</a><a href="/contact.php">Contact</a><a href="/#download">Get the app</a></nav>
@@ -30,7 +30,7 @@ require_once __DIR__ . '/site-icons.php';
 </header>
 <aside class="upgrade-banner" aria-label="App update notice">
     <div class="section-wrap">
-        A new chat experience is coming to Homework Helper and Classroom Helper.
+        A new way to ask, hear and understand.
         <a href="/app-update.php">Check device requirements and transition details</a>
     </div>
 </aside>

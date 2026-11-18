@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../config.php';
 $siteTitle = isset($pageTitle) ? $pageTitle . ' - Homework Helper' : 'Homework Helper - Less stuck. More aha.';
-$siteDescription = $pageDescription ?? 'Talk through homework, share a photo, or sketch an idea with your AI study companion. Meet Homework Helper for Android, iPhone, iPad and Windows. Ages 13+.';
+$siteDescription = $pageDescription ?? 'Ask by voice, text, photo or screenshot. Tap a reply to see and hear your AI study companion explain it. Meet Homework Helper for web, Android, iPhone, iPad and Windows.';
 $sitePath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $siteCanonical = $canonicalUrl ?? 'https://homeworkhelper.dev' . ($sitePath === '/index.php' ? '/' : $sitePath);
 $escapeMeta = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
@@ -33,16 +33,18 @@ $escapeMeta = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES,
 <meta property="og:title" content="<?= $escapeMeta($siteTitle) ?>">
 <meta property="og:description" content="<?= $escapeMeta($siteDescription) ?>">
 <meta property="og:url" content="<?= $escapeMeta($siteCanonical) ?>">
-<meta property="og:image" content="https://homeworkhelper.dev/assets/showcase/study-art.webp">
-<meta property="og:image:alt" content="A notebook, pencil and science-inspired study illustration">
+<meta property="og:image" content="https://homeworkhelper.dev/assets/refresh-20261118/windows-poster.webp">
+<meta property="og:image:alt" content="Homework Helper’s video avatar in the current Windows app">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?= $escapeMeta($siteTitle) ?>">
 <meta name="twitter:description" content="<?= $escapeMeta($siteDescription) ?>">
-<meta name="twitter:image" content="https://homeworkhelper.dev/assets/showcase/study-art.webp">
+<meta name="twitter:image" content="https://homeworkhelper.dev/assets/refresh-20261118/windows-poster.webp">
 <link rel="icon" type="image/png" href="/assets/showcase/app-icon.png">
 <link rel="apple-touch-icon" href="/assets/showcase/app-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="/dist/output.css" rel="stylesheet">
-<link href="/assets/site.css" rel="stylesheet">
+<link href="/assets/site.css?v=20261118" rel="stylesheet">
+<link href="/assets/product-showcase.css?v=20261118" rel="stylesheet">
+<noscript><style>.film-start, .platform-tabs { display: none; }</style></noscript>
